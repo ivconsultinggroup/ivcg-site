@@ -4,33 +4,237 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Innovation Vision Consulting Group</title>
-  <meta name="description" content="Innovation Vision Consulting Group — new website coming soon.">
+  <meta name="description" content="We help growing businesses and project-led teams bring structure, operational clarity and execution to what matters most.">
+  <link rel="icon" href="assets/logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Harmattan:wght@400;500&family=Tinos:ital@1&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --navy: #1d4355;
+      --cyan: #0cc0df;
+      --white: #ffffff;
+    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
+      font-family: "Montserrat", system-ui, sans-serif;
+      color: var(--navy);
+      background: var(--white);
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative;
       min-height: 100vh;
+      overflow: hidden;
+      background: url("assets/waves.webp") center / cover no-repeat;
+      display: flex;
+      flex-direction: column;
+    }
+    /* Team photo on the right, fading into the background on the left */
+    .hero__photo {
+      position: absolute;
+      top: 0; right: 0; bottom: 0;
+      width: 68%;
+      background: url("assets/team.webp") 30% top / cover no-repeat;
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.6) 12%, #000 24%);
+              mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.6) 12%, #000 24%);
+    }
+    /* The blue waves sweep over the bottom of the photo */
+    .hero__waves {
+      position: absolute;
+      inset: 0;
+      background: url("assets/waves.webp") center / cover no-repeat;
+      -webkit-mask-image: linear-gradient(to top, #000 18%, rgba(0,0,0,.6) 34%, transparent 50%);
+              mask-image: linear-gradient(to top, #000 18%, rgba(0,0,0,.6) 34%, transparent 50%);
+    }
+    /* Soft white glow behind the text so it stays readable */
+    .hero__glow {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 55% 70% at 18% 55%, rgba(255,255,255,.85), rgba(255,255,255,0) 70%);
+    }
+
+    /* ---------- Header ---------- */
+    .header {
+      position: relative;
+      z-index: 3;
       display: flex;
       align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 24px;
-      font-family: "Inter", system-ui, sans-serif;
-      background: #0f1a2b;
-      color: #f4f1ea;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 56px 5.5vw 0;
     }
-    h1 { font-weight: 600; font-size: clamp(2rem, 6vw, 3.5rem); letter-spacing: -0.02em; }
-    .line { width: 60px; height: 2px; background: #c8a96a; margin: 24px auto; }
-    p { font-weight: 300; font-size: clamp(1rem, 2.5vw, 1.25rem); opacity: 0.85; }
+    .logo img { display: block; width: clamp(220px, 24vw, 340px); height: auto; }
+    .nav { display: flex; align-items: center; gap: clamp(20px, 3.4vw, 64px); }
+    .nav a {
+      font-family: "Harmattan", sans-serif;
+      font-size: 1.3rem;
+      color: var(--navy);
+      padding: 6px 2px;
+      border-bottom: 3px solid transparent;
+      text-shadow: 0 0 10px #fff, 0 0 18px #fff;
+      transition: color .2s, border-color .2s;
+    }
+    .nav a:hover { color: var(--cyan); }
+    .nav a.active { border-bottom-color: var(--cyan); }
+    .nav .talk {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+      font-size: .85rem;
+      letter-spacing: .22em;
+      padding: 15px 34px;
+      border: 2.5px solid var(--cyan);
+      border-radius: 999px;
+      background: rgba(255,255,255,.25);
+    }
+    .nav .talk:hover { background: var(--cyan); color: var(--white); }
+
+    /* ---------- Content ---------- */
+    .content {
+      position: relative;
+      z-index: 2;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 48px 5.5vw 14vh;
+      max-width: 1100px;
+    }
+    .tagline {
+      font-weight: 600;
+      font-size: clamp(.8rem, 1.15vw, 1.1rem);
+      letter-spacing: .2em;
+      margin-bottom: 28px;
+    }
+    h1 {
+      font-weight: 800;
+      font-size: clamp(2.6rem, 5.6vw, 6rem);
+      line-height: 1.12;
+      letter-spacing: .06em;
+    }
+    h1 span { color: var(--cyan); }
+    .lead {
+      font-family: "Tinos", "Liberation Serif", Georgia, serif;
+      font-style: italic;
+      font-size: clamp(1.1rem, 1.55vw, 1.6rem);
+      line-height: 1.55;
+      max-width: 34em;
+      margin: 56px 0 56px 4px;
+    }
+    .buttons { display: flex; flex-wrap: wrap; gap: 24px 60px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 18px;
+      font-weight: 800;
+      font-size: clamp(.85rem, 1.1vw, 1.05rem);
+      letter-spacing: .2em;
+      padding: 20px 38px;
+      border-radius: 999px;
+      border: 2.5px solid var(--cyan);
+      transition: transform .2s, background .2s, color .2s;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn--solid { background: var(--cyan); color: var(--white); }
+    .btn--solid:hover { background: #09a8c4; border-color: #09a8c4; }
+    .btn--outline { background: rgba(255,255,255,.3); color: var(--navy); }
+    .btn--outline:hover { background: var(--cyan); color: var(--white); }
+    .btn svg { width: 40px; height: 14px; }
+
+    /* ---------- Menu button (phones) ---------- */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 0;
+      cursor: pointer;
+      padding: 8px;
+    }
+    .menu-toggle span {
+      display: block;
+      width: 28px; height: 3px;
+      margin: 6px 0;
+      background: var(--navy);
+      border-radius: 2px;
+    }
+
+    @media (max-width: 1000px) {
+      .header { padding-top: 24px; }
+      .menu-toggle { display: block; }
+      .nav {
+        display: none;
+        position: absolute;
+        top: 100%; right: 5.5vw;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        padding: 16px 24px;
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(29,67,85,.15);
+        min-width: 220px;
+      }
+      .nav.open { display: flex; }
+      .nav a { text-align: center; }
+      .nav a.active { border-bottom-color: transparent; color: var(--cyan); }
+      .nav .talk { margin-top: 8px; }
+      .hero__photo {
+        width: 100%;
+        opacity: .35;
+        -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 75%);
+                mask-image: linear-gradient(to bottom, #000 0%, transparent 75%);
+      }
+      .hero__glow { background: rgba(255,255,255,.35); }
+      .content { padding-bottom: 28vh; }
+      .lead { margin: 32px 0; }
+    }
+    @media (max-width: 520px) {
+      .logo img { width: 200px; }
+      h1 { letter-spacing: .03em; }
+      .btn { width: 100%; justify-content: center; padding: 18px 20px; }
+    }
   </style>
 </head>
 <body>
-  <main>
-    <h1>Innovation Vision Consulting Group</h1>
-    <div class="line"></div>
-    <p>Our new website is coming soon.</p>
-  </main>
+  <section class="hero" id="top">
+    <div class="hero__photo" aria-hidden="true"></div>
+    <div class="hero__waves" aria-hidden="true"></div>
+    <div class="hero__glow" aria-hidden="true"></div>
+
+    <header class="header">
+      <a class="logo" href="#top"><img src="assets/logo.svg" alt="Innovation Vision Consulting Group" width="330" height="85"></a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav">
+        <a href="#top" class="active">Home</a>
+        <a href="mailto:contact@ivconsultinggroup.com?subject=Services%20inquiry">Services</a>
+        <a href="coming-soon.html">About</a>
+        <a href="mailto:contact@ivconsultinggroup.com">Contact</a>
+        <a href="mailto:contact@ivconsultinggroup.com?subject=Let%27s%20talk" class="talk">LET’S TALK</a>
+      </nav>
+    </header>
+
+    <main class="content">
+      <p class="tagline">IDEAS | STRATEGY | OPERATIONS | EXECUTION</p>
+      <h1>Strategy built<br>for <span>execution.</span></h1>
+      <p class="lead">We help growing businesses and project-led teams bring structure, operational clarity and execution to what matters most.</p>
+      <div class="buttons">
+        <a class="btn btn--solid" href="coming-soon.html">EXPLORE SERVICES
+          <svg viewBox="0 0 40 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M0 7h38M32 1l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn--outline" href="mailto:contact@ivconsultinggroup.com?subject=Consultation%20request">BOOK A CONSULTATION</a>
+      </div>
+    </main>
+  </section>
+
+  <script>
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav");
+    toggle.addEventListener("click", () => {
+      const open = nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open);
+    });
+  </script>
 </body>
 </html>
