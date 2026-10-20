@@ -73,13 +73,25 @@
       font-family: "Harmattan", sans-serif;
       font-size: 1.3rem;
       color: var(--navy);
+      position: relative;
       padding: 6px 2px;
-      border-bottom: 3px solid transparent;
       text-shadow: 0 0 10px #fff, 0 0 18px #fff;
-      transition: color .2s, border-color .2s;
+      transition: color .2s;
+    }
+    /* Underline that grows in from the center on hover */
+    .nav a:not(.talk)::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: -2px;
+      height: 3px;
+      border-radius: 2px;
+      background: var(--cyan);
+      transform: scaleX(0);
+      transition: transform .3s ease;
     }
     .nav a:hover { color: var(--cyan); }
-    .nav a.active { border-bottom-color: var(--cyan); }
+    .nav a:not(.talk):hover::after,
+    .nav a:not(.talk):focus-visible::after { transform: scaleX(1); }
     .nav .talk {
       font-family: "Montserrat", sans-serif;
       font-weight: 800;
@@ -178,7 +190,6 @@
       }
       .nav.open { display: flex; }
       .nav a { text-align: center; }
-      .nav a.active { border-bottom-color: transparent; color: var(--cyan); }
       .nav .talk { margin-top: 8px; }
       .hero__photo {
         width: 100%;
@@ -207,7 +218,7 @@
       <a class="logo" href="#top"><img src="assets/logo.svg" alt="Innovation Vision Consulting Group" width="340" height="85"></a>
       <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
       <nav class="nav">
-        <a href="#top" class="active">Home</a>
+        <a href="#top">Home</a>
         <a href="mailto:contact@ivconsultinggroup.com?subject=Services%20inquiry">Services</a>
         <a href="coming-soon.html">About</a>
         <a href="mailto:contact@ivconsultinggroup.com">Contact</a>
