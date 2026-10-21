@@ -2,252 +2,287 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Innovation Vision Consulting Group</title>
-  <meta name="description" content="We help growing businesses and project-led teams bring structure, operational clarity and execution to what matters most.">
-  <link rel="icon" href="assets/icon.svg?v=3" type="image/svg+xml">
-  <link rel="icon" href="assets/icon-32.png?v=3" sizes="32x32" type="image/png">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=3">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>IVCG | Strategy, Operations &amp; Financial Advisory</title>
+  <meta name="description" content="Miami-based advisory firm for strategy, operations and finance. Growth, fundraising, M&amp;A and restructuring, with expertise in sports and live entertainment.">
+  <link rel="canonical" href="https://ivconsultinggroup.com/">
+  <link rel="alternate" hreflang="en" href="https://ivconsultinggroup.com/">
+  <link rel="alternate" hreflang="fr" href="https://ivconsultinggroup.com/fr/">
+  <link rel="alternate" hreflang="x-default" href="https://ivconsultinggroup.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Innovation Vision Consulting Group">
+  <meta property="og:title" content="IVCG | Strategy, Operations &amp; Financial Advisory">
+  <meta property="og:description" content="Miami-based advisory firm for strategy, operations and finance. Growth, fundraising, M&amp;A and restructuring, with expertise in sports and live entertainment.">
+  <meta property="og:url" content="https://ivconsultinggroup.com/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://ivconsultinggroup.com/assets/team.webp">
+  <link rel="icon" href="/assets/icon.svg?v=3" type="image/svg+xml">
+  <link rel="icon" href="/assets/icon-32.png?v=3" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=3">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Harmattan:wght@400;500&family=Tinos:ital@1&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --navy: #1d4355;
-      --cyan: #0cc0df;
-      --white: #ffffff;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: "Montserrat", system-ui, sans-serif;
-      color: var(--navy);
-      background: var(--white);
-    }
-    a { color: inherit; text-decoration: none; }
-
-    /* ---------- Hero ---------- */
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      overflow: hidden;
-      background: url("assets/waves.webp") center / cover no-repeat;
-      display: flex;
-      flex-direction: column;
-    }
-    /* Team photo on the right, fading into the background on the left */
-    .hero__photo {
-      position: absolute;
-      top: 0; right: 0; bottom: 0;
-      width: 68%;
-      background: url("assets/team.webp") 30% top / cover no-repeat;
-      -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.6) 12%, #000 24%);
-              mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.6) 12%, #000 24%);
-    }
-    /* The blue waves sweep over the bottom of the photo */
-    .hero__waves {
-      position: absolute;
-      inset: 0;
-      background: url("assets/waves.webp") center / cover no-repeat;
-      -webkit-mask-image: linear-gradient(to top, #000 18%, rgba(0,0,0,.6) 34%, transparent 50%);
-              mask-image: linear-gradient(to top, #000 18%, rgba(0,0,0,.6) 34%, transparent 50%);
-    }
-    /* Soft white glow behind the text so it stays readable */
-    .hero__glow {
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 55% 70% at 18% 55%, rgba(255,255,255,.85), rgba(255,255,255,0) 70%);
-    }
-
-    /* ---------- Header ---------- */
-    .header {
-      position: relative;
-      z-index: 3;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      padding: 56px 5.5vw 0;
-    }
-    .logo img { display: block; width: clamp(226px, 24.7vw, 350px); height: auto; }
-    .nav { display: flex; align-items: center; gap: clamp(20px, 3.4vw, 64px); }
-    .nav a {
-      font-family: "Harmattan", sans-serif;
-      font-size: 1.3rem;
-      color: var(--navy);
-      position: relative;
-      padding: 6px 2px;
-      text-shadow: 0 0 10px #fff, 0 0 18px #fff;
-      transition: color .2s;
-    }
-    /* Underline that grows in from the center on hover */
-    .nav a:not(.talk)::after {
-      content: "";
-      position: absolute;
-      left: 0; right: 0; bottom: -2px;
-      height: 3px;
-      border-radius: 2px;
-      background: var(--cyan);
-      transform: scaleX(0);
-      transition: transform .3s ease;
-    }
-    .nav a:hover { color: var(--cyan); }
-    .nav a:not(.talk):hover::after,
-    .nav a:not(.talk):focus-visible::after { transform: scaleX(1); }
-    .nav .talk {
-      font-family: "Montserrat", sans-serif;
-      font-weight: 800;
-      font-size: .85rem;
-      letter-spacing: .22em;
-      padding: 15px 34px;
-      border: 2.5px solid var(--cyan);
-      border-radius: 999px;
-      background: rgba(255,255,255,.25);
-    }
-    .nav .talk:hover { background: var(--cyan); color: var(--white); }
-
-    /* ---------- Content ---------- */
-    .content {
-      position: relative;
-      z-index: 2;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 48px 5.5vw 14vh;
-      max-width: 1100px;
-    }
-    .tagline {
-      font-weight: 600;
-      font-size: clamp(.8rem, 1.15vw, 1.1rem);
-      letter-spacing: .2em;
-      margin-bottom: 28px;
-    }
-    h1 {
-      font-weight: 800;
-      font-size: clamp(2.6rem, 5.6vw, 6rem);
-      line-height: 1.12;
-      letter-spacing: .06em;
-    }
-    h1 span { color: var(--cyan); }
-    .lead {
-      font-family: "Tinos", "Liberation Serif", Georgia, serif;
-      font-style: italic;
-      font-size: clamp(1.1rem, 1.55vw, 1.6rem);
-      line-height: 1.55;
-      max-width: 34em;
-      margin: 56px 0 56px 4px;
-    }
-    .buttons { display: flex; flex-wrap: wrap; gap: 24px 60px; }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 18px;
-      font-weight: 800;
-      font-size: clamp(.85rem, 1.1vw, 1.05rem);
-      letter-spacing: .2em;
-      padding: 20px 38px;
-      border-radius: 999px;
-      border: 2.5px solid var(--cyan);
-      transition: transform .2s, background .2s, color .2s;
-    }
-    .btn:hover { transform: translateY(-2px); }
-    .btn--solid { background: var(--cyan); color: var(--white); }
-    .btn--solid:hover { background: #09a8c4; border-color: #09a8c4; }
-    .btn--outline { background: rgba(255,255,255,.3); color: var(--navy); }
-    .btn--outline:hover { background: var(--cyan); color: var(--white); }
-    .btn svg { width: 40px; height: 14px; }
-
-    /* ---------- Menu button (phones) ---------- */
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: 0;
-      cursor: pointer;
-      padding: 8px;
-    }
-    .menu-toggle span {
-      display: block;
-      width: 28px; height: 3px;
-      margin: 6px 0;
-      background: var(--navy);
-      border-radius: 2px;
-    }
-
-    @media (max-width: 1000px) {
-      .header { padding-top: 24px; }
-      .menu-toggle { display: block; }
-      .nav {
-        display: none;
-        position: absolute;
-        top: 100%; right: 5.5vw;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 4px;
-        padding: 16px 24px;
-        background: #fff;
-        border-radius: 16px;
-        box-shadow: 0 10px 30px rgba(29,67,85,.15);
-        min-width: 220px;
-      }
-      .nav.open { display: flex; }
-      .nav a { text-align: center; }
-      .nav .talk { margin-top: 8px; }
-      .hero__photo {
-        width: 100%;
-        opacity: .35;
-        -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 75%);
-                mask-image: linear-gradient(to bottom, #000 0%, transparent 75%);
-      }
-      .hero__glow { background: rgba(255,255,255,.35); }
-      .content { padding-bottom: 28vh; }
-      .lead { margin: 32px 0; }
-    }
-    @media (max-width: 520px) {
-      .logo img { width: 206px; }
-      h1 { letter-spacing: .03em; }
-      .btn { width: 100%; justify-content: center; padding: 18px 20px; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Harmattan:wght@400;500&family=Tinos:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css?v=1">
 </head>
 <body>
-  <section class="hero" id="top">
-    <div class="hero__photo" aria-hidden="true"></div>
-    <div class="hero__waves" aria-hidden="true"></div>
-    <div class="hero__glow" aria-hidden="true"></div>
-
-    <header class="header">
-      <a class="logo" href="#top"><img src="assets/logo.svg" alt="Innovation Vision Consulting Group" width="340" height="85"></a>
-      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-      <nav class="nav">
-        <a href="#top">Home</a>
-        <a href="mailto:contact@ivconsultinggroup.com?subject=Services%20inquiry">Services</a>
-        <a href="coming-soon.html">About</a>
-        <a href="mailto:contact@ivconsultinggroup.com">Contact</a>
-        <a href="mailto:contact@ivconsultinggroup.com?subject=Let%27s%20talk" class="talk">LET’S TALK</a>
+<header class="menu">
+  <div class="wrap">
+    <a class="logo" href="#top"><img src="/assets/logo.svg" alt="Innovation Vision Consulting Group" width="340" height="85"></a>
+    <div class="menu-right">
+      <nav id="nav">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#clients">Clients</a>
+        <a href="#challenges">Challenges</a>
+        <a href="#approach">Approach</a>
+        <a href="#why">Why IVCG</a>
+        <a href="#contact" class="talk">CONTACT</a>
       </nav>
-    </header>
+      <div class="lang" aria-label="Language"><a href="/" aria-current="true">EN</a><span aria-hidden="true">|</span><a href="/fr/" lang="fr" hreflang="fr">FR</a></div>
+      <button class="menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
 
-    <main class="content">
-      <p class="tagline">IDEAS | STRATEGY | OPERATIONS | EXECUTION</p>
-      <h1>Strategy built<br>for <span>execution.</span></h1>
-      <p class="lead">We help growing businesses and project-led teams bring structure, operational clarity and execution to what matters most.</p>
-      <div class="buttons">
-        <a class="btn btn--solid" href="coming-soon.html">EXPLORE SERVICES
-          <svg viewBox="0 0 40 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M0 7h38M32 1l6 6-6 6"/></svg>
-        </a>
-        <a class="btn btn--outline" href="mailto:contact@ivconsultinggroup.com?subject=Consultation%20request">BOOK A CONSULTATION</a>
+<main>
+  <!-- 01 HERO -->
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">Strategy · Operations · Finance</p>
+        <h1>Structure for ambitious <span>organizations.</span></h1>
+        <p class="lede">IVCG is a strategy, operations and financial advisory firm. We help organizations grow, restructure and execute with clarity, with signature expertise in sports and live entertainment.</p>
+        <div class="btns">
+          <a class="btn btn-solid" href="#contact"><span>Start a conversation</span> <span aria-hidden="true">⟶</span></a>
+          <a class="btn btn-line" href="#services">Explore our services</a>
+        </div>
       </div>
-    </main>
+    </div>
   </section>
 
-  <script>
-    const toggle = document.querySelector(".menu-toggle");
-    const nav = document.querySelector(".nav");
-    toggle.addEventListener("click", () => {
-      const open = nav.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", open);
+  <!-- 02 WHO WE ARE -->
+  <section class="about" id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-copy">
+          <p class="eyebrow">Who we are</p>
+          <h2 class="h2">One partner for strategy, operations and <span>finance.</span></h2>
+          <p class="first">Innovation Vision Consulting Group (IVCG) is a Miami-based advisory firm. We work with founders, executives and boards at the moments that shape an organization: launching, scaling, raising capital, merging, restructuring or changing leadership.</p>
+          <p>Most firms look at one piece of the problem. We connect all three: where the organization is going, how it actually runs, and whether the numbers hold. That integrated view lets us find root causes, not just symptoms, and build plans that work in practice.</p>
+          <p>Our signature expertise is in sports and live entertainment, industries where audiences are demanding, deadlines don’t move and execution is everything. The same discipline serves growing organizations in any sector.</p>
+          <p>We work as a long-term strategic partner, not a traditional agency.</p>
+        </div>
+        <dl class="traits">
+          <div class="trait"><b>Executive</b><span>in perspective.</span></div>
+          <div class="trait"><b>Analytical</b><span>in method.</span></div>
+          <div class="trait"><b>Discreet</b><span>by default.</span></div>
+          <div class="trait"><b>Practical</b><span>in delivery.</span></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 SERVICES -->
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Services</p>
+        <h2 class="h2">What we <span>do</span></h2>
+      </div>
+      <div class="pillars">
+        <article class="pillar">
+          <p class="tag">Practice 01</p>
+          <h3>Strategy &amp; Growth</h3>
+          <p>A clear direction, and leadership decisions grounded in evidence.</p>
+          <ul>
+            <li>Business strategy</li>
+            <li>Strategic growth planning</li>
+            <li>Executive advisory</li>
+          </ul>
+        </article>
+        <article class="pillar">
+          <p class="tag">Practice 02</p>
+          <h3>Operations &amp; Organization</h3>
+          <p>Clear roles, efficient workflows and an honest view of where the risk sits.</p>
+          <ul>
+            <li>Operations consulting</li>
+            <li>Organizational analysis</li>
+            <li>Process improvement</li>
+            <li>Operational audits</li>
+            <li>Risk identification</li>
+          </ul>
+        </article>
+        <article class="pillar">
+          <p class="tag">Practice 03</p>
+          <h3>Finance &amp; Transactions</h3>
+          <p>Financial foundations that support the strategy and stand up to investors and partners.</p>
+          <ul>
+            <li>Financial planning and modeling</li>
+            <li>Fundraising and investor readiness</li>
+            <li>Deal and project structuring</li>
+            <li>M&amp;A and restructuring</li>
+          </ul>
+        </article>
+        <article class="pillar">
+          <p class="tag">Practice 04</p>
+          <h3>Implementation Support</h3>
+          <p>We don’t stop at recommendations: we work alongside your team until the change is in place.</p>
+          <ul>
+            <li>Hands-on execution support</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 WHO WE WORK WITH -->
+  <section class="serve" id="clients">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Who we work with</p>
+        <h2 class="h2">Organizations at <span>decisive moments</span></h2>
+      </div>
+      <p class="group-label">By situation</p>
+      <div class="sit-grid">
+        <div class="sit"><h3>Founders and new ventures</h3><p>Turning an idea or project into a structured, fundable business.</p></div>
+        <div class="sit"><h3>Growing companies</h3><p>Scaling without losing control of operations or margins.</p></div>
+        <div class="sit"><h3>Organizations in transition</h3><p>Mergers, restructuring, leadership changes, new markets.</p></div>
+      </div>
+      <p class="group-label">Signature sectors</p>
+      <div class="sector-grid">
+        <div class="sector"><h3>Sports</h3><p>Teams, clubs, supporter organizations, leagues and sports-event suppliers.</p></div>
+        <div class="sector"><h3>Live events &amp; entertainment</h3><p>Ceremonies, concerts and music, corporate events, experiential and technical production.</p></div>
+      </div>
+      <p class="serve-note">We also partner with growing organizations across other industries.</p>
+    </div>
+  </section>
+
+  <!-- 05 CHALLENGES -->
+  <section class="challenges" id="challenges">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Challenges we solve</p>
+        <h2 class="h2">Where we make <span>the difference</span></h2>
+      </div>
+      <div class="chal-grid">
+        <div class="chal"><h3>Rapid growth</h3><p>Structure that keeps pace with ambition.</p></div>
+        <div class="chal"><h3>Operational complexity</h3><p>Many teams, partners and deadlines moving at once.</p></div>
+        <div class="chal"><h3>Raising capital</h3><p>Financials and a story investors can trust.</p></div>
+        <div class="chal"><h3>Mergers &amp; acquisitions</h3><p>Structuring the deal and integrating what follows.</p></div>
+        <div class="chal"><h3>Restructuring</h3><p>Resetting the organization on solid ground.</p></div>
+        <div class="chal"><h3>Governance</h3><p>Clear authority and sound decisions when the stakes are high.</p></div>
+        <div class="chal"><h3>Leadership transitions</h3><p>Founder succession without losing what works.</p></div>
+        <div class="chal"><h3>International expansion</h3><p>Consistent execution across markets.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 APPROACH -->
+  <section class="approach" id="approach">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Our approach</p>
+        <h2 class="h2">From insight to <span>execution</span></h2>
+      </div>
+      <ol class="steps">
+        <li class="step"><span class="num">01</span><h3>Discover</h3><p>Interviews and on-the-ground observation.</p></li>
+        <li class="step"><span class="num">02</span><h3>Recognize</h3><p>Patterns across strategy, operations and finances.</p></li>
+        <li class="step"><span class="num">03</span><h3>Diagnose</h3><p>Root causes, not symptoms.</p></li>
+        <li class="step"><span class="num">04</span><h3>Recommend</h3><p>Clear, prioritized recommendations.</p></li>
+        <li class="step"><span class="num">05</span><h3>Execute</h3><p>Hands-on support until it works.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 07 WHY IVCG -->
+  <section class="why" id="why">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Why IVCG</p>
+        <h2 class="h2">What sets us <span>apart</span></h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-item"><h3>Integrated</h3><p>Strategy, operations and finance with one partner.</p></div>
+        <div class="why-item"><h3>Sector depth</h3><p>Signature expertise in sports and live entertainment.</p></div>
+        <div class="why-item"><h3>Research-driven</h3><p>Grounded in structured analysis, not assumptions.</p></div>
+        <div class="why-item"><h3>International</h3><p>Consulting in English, French, Spanish and Portuguese.</p></div>
+        <div class="why-item"><h3>AI-enabled</h3><p>Modern analytical tools amplifying senior judgment.</p></div>
+        <div class="why-item"><h3>Discreet</h3><p>Confidentiality is the default, not an option.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="contact-copy">
+        <p class="eyebrow" style="color:var(--cyan)">Contact</p>
+        <h2 class="h2">Let’s talk about <span>what’s next.</span></h2>
+        <p class="lede">Tell us where you are and where you want to go. We respond within two business days.</p>
+        <dl class="details">
+          <div><dt>Office</dt><dd>990 Biscayne Boulevard, Ste 501<br>Miami, FL 33132</dd></div>
+          <div><dt>Email</dt><dd>contact@ivconsultinggroup.com</dd></div>
+          <div><dt>Phone</dt><dd>+1 786 548 1743</dd></div>
+        </dl>
+      </div>
+      <form id="contact-form" novalidate="">
+        <div class="row2">
+          <label for="f-name"><span>Name</span><input id="f-name" name="name" type="text" autocomplete="name"></label>
+          <label for="f-company"><span>Company</span><input id="f-company" name="company" type="text" autocomplete="organization"></label>
+        </div>
+        <div class="row2">
+          <label for="f-role"><span>Role</span><input id="f-role" name="role" type="text" autocomplete="organization-title"></label>
+          <label for="f-email"><span>Email</span><input id="f-email" name="email" type="email" autocomplete="email"></label>
+        </div>
+        <label for="f-msg"><span>How can we help?</span><textarea id="f-msg" name="message"></textarea></label>
+        <button class="btn btn-solid" type="submit">Send message</button>
+        <p class="form-msg" id="form-msg" hidden="">Thank you. Your email app should now open with your message ready to send to contact@ivconsultinggroup.com.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Innovation Vision Consulting Group. IVCG is a trade name of IVC Blueprint LLC, a Florida limited liability company.</span>
+    <nav>
+      <a href="#services">Services</a><a href="#approach">Approach</a><a href="#why">Why IVCG</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const nav = document.getElementById("nav");
+  menuBtn.addEventListener("click", () => {
+    const open = nav.classList.toggle("open");
+    menuBtn.setAttribute("aria-expanded", open);
+  });
+  nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
+    nav.classList.remove("open");
+    menuBtn.setAttribute("aria-expanded", "false");
+  }));
+
+  // Underline the menu item for the section on screen
+  const links = [...nav.querySelectorAll("a:not(.talk)")];
+  const watch = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      links.forEach(l => l.classList.toggle("on", l.getAttribute("href") === "#" + e.target.id));
     });
-  </script>
+  }, { rootMargin: "-45% 0px -50% 0px" });
+  document.querySelectorAll("main section[id]").forEach(s => watch.observe(s));
+
+  // Until a form service is connected, the form opens the visitor's email app with the message filled in
+  document.getElementById("contact-form").addEventListener("submit", e => {
+    e.preventDefault();
+    const f = e.target;
+    const labels = ['Name', 'Company', 'Role', 'Email'];
+    const lines = ["name", "company", "role", "email"].map((k, i) => labels[i] + ": " + f.elements[k].value);
+    const body = lines.join("\n") + "\n\n" + f.elements.message.value;
+    location.href = "mailto:contact@ivconsultinggroup.com?subject=" + encodeURIComponent("Website inquiry") + "&body=" + encodeURIComponent(body);
+    document.getElementById("form-msg").hidden = false;
+  });
+</script>
 </body>
 </html>
