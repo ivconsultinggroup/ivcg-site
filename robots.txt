@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /signature.html
 
 Sitemap: https://ivconsultinggroup.com/sitemap.xml

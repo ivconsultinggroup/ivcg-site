@@ -20,7 +20,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Innovation Vision Consulting Group">
   <meta name="twitter:card" content="summary_large_image">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "@id": "https://ivconsultinggroup.com/#org", "name": "Innovation Vision Consulting Group", "alternateName": "IVCG", "url": "https://ivconsultinggroup.com/", "logo": "https://ivconsultinggroup.com/assets/email-logo.png", "image": "https://ivconsultinggroup.com/assets/share-en.jpg", "email": "contact@ivconsultinggroup.com", "sameAs": ["https://www.linkedin.com/company/ivconsultinggroup"], "address": {"@type": "PostalAddress", "addressLocality": "Miami", "addressRegion": "FL", "addressCountry": "US"}, "areaServed": "Worldwide", "knowsLanguage": ["en", "fr", "es", "pt"], "knowsAbout": ["Business strategy", "Operations consulting", "Financial planning", "Sports business", "Live events", "Entertainment industry", "Organizational design", "Restructuring"], "description": "Strategy, operations and financial advisory firm based in Miami, with signature expertise in sports and live entertainment."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "@id": "https://ivconsultinggroup.com/#org", "name": "Innovation Vision Consulting Group", "alternateName": "IVCG", "url": "https://ivconsultinggroup.com/", "logo": "https://ivconsultinggroup.com/assets/email-logo.png", "image": "https://ivconsultinggroup.com/assets/share-en.jpg", "email": "hello@ivconsultinggroup.com", "sameAs": ["https://www.linkedin.com/company/ivconsultinggroup"], "address": {"@type": "PostalAddress", "addressLocality": "Miami", "addressRegion": "FL", "addressCountry": "US"}, "areaServed": "Worldwide", "knowsLanguage": ["en", "fr", "es", "pt"], "knowsAbout": ["Business strategy", "Operations consulting", "Financial planning", "Sports business", "Live events", "Entertainment industry", "Organizational design", "Restructuring"], "description": "Strategy, operations and financial advisory firm based in Miami, with signature expertise in sports and live entertainment."}</script>
   <meta name="theme-color" content="#061a26">
   <link rel="icon" href="/assets/icon.svg?v=3" type="image/svg+xml">
   <link rel="icon" href="/assets/icon-32.png?v=3" sizes="32x32" type="image/png">
@@ -568,7 +568,7 @@
         <p class="lede">Tell us where you are and where you want to go. We respond within two business days.</p>
         <dl class="details">
           <div><dt>Based in</dt><dd>Miami, Florida · Working internationally</dd></div>
-          <div><dt>Email</dt><dd>contact@ivconsultinggroup.com</dd></div>
+          <div><dt>Email</dt><dd>hello@ivconsultinggroup.com</dd></div>
         </dl>
       </div>
       <form id="form" method="POST">
@@ -915,14 +915,14 @@
     els.forEach(el => { if (el.getBoundingClientRect().top > innerHeight) { el.classList.add("pre"); io.observe(el); } });
   })();
 
-  /* ---------- Contact form: sent to Formspree, which emails contact@ivconsultinggroup.com ---------- */
+  /* ---------- Contact form: sent to Formspree, which emails hello@ivconsultinggroup.com ---------- */
   (() => {
     // Bot protection: the address is only known to this script, a hidden field traps autofill bots,
     // and a form sent within seconds of loading the page is treated as a bot.
     const ENDPOINT = ["https://formspree.io/f/", "xoeeqgao"].join("");
     const form = document.getElementById("form"), out = document.getElementById("sent"), btn = form.querySelector("button[type=submit]");
     const loadedAt = Date.now();
-    const T = { sending: "Sending…", ok: "Thank you. Your message is on its way. We respond within two business days.", missing: "Please add your name, a valid email and a short message.", fail: "Your message could not be sent. Please email us at contact@ivconsultinggroup.com." };
+    const T = { sending: "Sending…", ok: "Thank you. Your message is on its way. We respond within two business days.", missing: "Please add your name, a valid email and a short message.", fail: "Your message could not be sent. Please email us at hello@ivconsultinggroup.com." };
     form.addEventListener("submit", async e => {
       e.preventDefault();
       if (!form.checkValidity()) { out.textContent = T.missing; out.className = "sent err"; out.hidden = false; form.reportValidity(); return; }
