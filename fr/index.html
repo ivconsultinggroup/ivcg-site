@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>IVCG | Conseil en stratégie, opérations et finance</title>
-  <meta name="description" content="Cabinet de conseil basé à Miami en stratégie, opérations et finance. Croissance, levée de fonds, fusions-acquisitions et restructuration, avec une expertise dans le sport et le divertissement.">
+  <meta name="description" content="Cabinet de conseil basé à Miami en stratégie, opérations et finance, avec une expertise de référence dans le sport et le divertissement.">
   <link rel="canonical" href="https://ivconsultinggroup.com/fr/">
   <link rel="alternate" hreflang="en" href="https://ivconsultinggroup.com/">
   <link rel="alternate" hreflang="fr" href="https://ivconsultinggroup.com/fr/">
@@ -12,231 +12,575 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Innovation Vision Consulting Group">
   <meta property="og:title" content="IVCG | Conseil en stratégie, opérations et finance">
-  <meta property="og:description" content="Cabinet de conseil basé à Miami en stratégie, opérations et finance. Croissance, levée de fonds, fusions-acquisitions et restructuration, avec une expertise dans le sport et le divertissement.">
+  <meta property="og:description" content="Cabinet de conseil basé à Miami en stratégie, opérations et finance, avec une expertise de référence dans le sport et le divertissement.">
   <meta property="og:url" content="https://ivconsultinggroup.com/fr/">
   <meta property="og:locale" content="fr_FR">
-  <meta property="og:image" content="https://ivconsultinggroup.com/assets/team.webp">
+  <meta property="og:image" content="https://ivconsultinggroup.com/assets/stadium-roof.webp">
+  <meta name="theme-color" content="#061a26">
   <link rel="icon" href="/assets/icon.svg?v=3" type="image/svg+xml">
   <link rel="icon" href="/assets/icon-32.png?v=3" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=3">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Harmattan:wght@400;500&family=Tinos:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/site.css?v=1">
+  <!-- Cloudflare Web Analytics -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "1effc0d702124ebe9c0d54477692b5bf"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400;1,6..96,500&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* Layout: editorial consulting page. Deep-navy stage for the hero, sectors and contact; bright paper bands between. Big high-contrast serif for statements, Montserrat for everything that informs. One accent: IVCG cyan. Single committed look, both host themes. */
+  :root {
+    --ink: #061a26;          /* deepest navy, the stage */
+    --navy: #1d4355;         /* IVCG brand navy */
+    --cyan: #0cc0df;         /* IVCG brand cyan */
+    --cyan-deep: #0890a8;
+    --paper: #f3f7f9;
+    --white: #ffffff;
+    --line: #d6e3ea;
+    --muted: #557080;
+    --on-ink: #e6f1f5;
+    --on-ink-muted: #93b3c1;
+    --serif: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+    --sans: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  img { max-width: 100%; }
+  [hidden] { display: none !important; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--white); color: var(--navy); font-family: var(--sans); font-size: 16px; line-height: 1.6; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; }
+  :focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
+  h1, h2, h3 { margin: 0; text-wrap: balance; font-weight: inherit; }
+  p { margin: 0; }
+  ul, ol, dl { margin: 0; padding: 0; list-style: none; }
+  .wrap { max-width: 1240px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  section { scroll-margin-top: 70px; }
+  .kicker { font-weight: 700; font-size: .74rem; letter-spacing: .24em; text-transform: uppercase; color: var(--cyan-deep); display: flex; align-items: center; gap: 12px; }
+  .kicker::before { content: ""; width: 28px; height: 2px; background: var(--cyan); }
+  .display { font-family: var(--serif); font-weight: 500; letter-spacing: -.01em; line-height: 1.05; }
+  .display em { font-style: italic; color: var(--cyan-deep); }
+  .just { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+
+  /* ---------- Header ---------- */
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 20; background: var(--ink); }
+  .top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 19; background: rgba(6,26,38,.92); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,.08); }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 14px; }
+  .top .logo img { display: block; width: 186px; height: auto; }
+  .top nav { display: flex; align-items: center; gap: clamp(16px, 2.2vw, 32px); color: var(--on-ink); font-size: .9rem; font-weight: 500; }
+  .top nav a:not(.cta) { position: relative; padding: 4px 0; }
+  .top nav a:not(.cta)::after { content: ""; position: absolute; left: 0; right: 0; bottom: -3px; height: 2px; background: var(--cyan); transform: scaleX(0); transition: transform .3s; }
+  .top nav a:not(.cta):hover::after { transform: scaleX(1); }
+  .top .cta { font-weight: 700; font-size: .74rem; letter-spacing: .18em; text-transform: uppercase; padding: 11px 20px; border: 1.5px solid var(--cyan); border-radius: 999px; color: var(--white); transition: background .2s; }
+  .top .cta:hover { background: var(--cyan); color: var(--ink); }
+  .lang { display: flex; gap: 2px; font-size: .74rem; font-weight: 700; letter-spacing: .12em; }
+  .top nav .lang a { padding: 6px 7px; border-radius: 6px; color: var(--on-ink-muted); }
+  .top nav .lang a::after { display: none; }
+  .top nav .lang a[aria-current] { color: var(--white); background: rgba(255,255,255,.1); }
+  @media (max-width: 900px) { .top nav a:not(.cta):not(.lang a) { display: none; } }
+
+  /* ---------- Hero ---------- */
+  .story { position: relative; height: 290vh; background: var(--ink); }
+  .hero { position: relative; background: var(--ink); color: var(--white); overflow: hidden; }
+  .pin.hero { position: sticky; top: 0; height: 100vh; height: 100svh; display: flex; align-items: center; }
+  .hero-copy { position: relative; z-index: 2; width: 100%; will-change: transform, opacity; }
+  .beats { position: absolute; z-index: 2; left: max(16px, calc((100vw - 1240px) / 2 + 16px)); top: 50%; width: min(600px, 46vw); height: 0; }
+  .beat { position: absolute; left: 0; right: 0; top: 0; transform: translateY(calc(-50% + 30px)); opacity: 0; transition: opacity .7s, transform .9s cubic-bezier(.2,.8,.2,1); font-family: var(--serif); font-weight: 500; font-size: clamp(2.2rem, 4.6vw, 4.4rem); line-height: 1.04; letter-spacing: -.01em; color: var(--white); pointer-events: none; }
+  .beat.on { opacity: 1; transform: translateY(-50%); }
+  .beat em { font-style: italic; color: var(--cyan); }
+  .beat span { display: block; font-family: var(--sans); font-size: clamp(1rem, 1.4vw, 1.15rem); color: var(--on-ink-muted); margin-top: 22px; letter-spacing: 0; }
+  .cue { position: absolute; z-index: 2; left: 50%; bottom: 28px; translate: -50% 0; display: grid; justify-items: center; gap: 8px; font-size: .68rem; font-weight: 700; letter-spacing: .3em; text-transform: uppercase; color: var(--on-ink-muted); transition: opacity .4s; }
+  .cue i { width: 1px; height: 38px; background: linear-gradient(var(--cyan), transparent); animation: cue 1.8s ease-in-out infinite; transform-origin: top; }
+  @keyframes cue { 0% { transform: scaleY(0); } 50% { transform: scaleY(1); } 100% { transform: scaleY(1); opacity: 0; } }
+  @media (max-width: 760px) {
+    .story { height: 240vh; }
+    .beats { width: calc(100% - 32px); top: 68%; }
+    .beat { font-size: clamp(1.9rem, 8vw, 2.6rem); }
+  }
+  .hero canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .hero-photo {
+    position: absolute; top: 0; right: 0; bottom: 0; width: 70%;
+    background: url("/assets/stadium-roof.webp") 55% 20% / cover no-repeat; opacity: .55;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 45%); mask-image: linear-gradient(to right, transparent, #000 45%);
+    animation: drift 30s ease-in-out infinite alternate;
+  }
+  @keyframes drift { from { transform: scale(1.04) translateX(0); } to { transform: scale(1.1) translateX(-2%); } }
+  @media (max-width: 760px) { .hero-photo { width: 100%; opacity: .35; } }
+  .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(6,26,38,.92) 0%, rgba(6,26,38,.55) 48%, rgba(6,26,38,.05) 100%); pointer-events: none; }
+  .hero .wrap { position: relative; z-index: 2; padding-block: 70px 40px; display: grid; gap: 26px; }
+  .hero .kicker { color: var(--cyan); }
+  .hero h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(2.6rem, min(7vw, 10vh), 6.4rem); line-height: .98; letter-spacing: -.02em; max-width: 11ch; }
+  .hero h1 em { font-style: italic; color: var(--cyan); }
+  .rotator { font-size: clamp(1.15rem, 2vw, 1.55rem); font-weight: 500; color: var(--on-ink); display: flex; flex-wrap: wrap; gap: .35em; align-items: baseline; }
+  .rotator .slot { display: inline-grid; overflow: hidden; height: 1.5em; vertical-align: bottom; }
+  .rotator .word { font-family: var(--serif); font-style: italic; font-size: 1.25em; line-height: 1.2; color: var(--cyan); display: inline-block; transition: transform .55s cubic-bezier(.2,.8,.2,1), opacity .55s; }
+  .rotator .word.out { transform: translateY(-100%); opacity: 0; }
+  .rotator .word.in { transform: translateY(100%); opacity: 0; }
+  .hero .lede { max-width: 34em; color: var(--on-ink-muted); font-size: clamp(1rem, 1.3vw, 1.12rem); }
+  .hero .actions { display: flex; flex-wrap: wrap; gap: 14px 18px; padding-top: 6px; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 12px; font-weight: 700; font-size: .8rem; letter-spacing: .16em; text-transform: uppercase; padding: 17px 30px; border-radius: 999px; border: 1.5px solid var(--cyan); cursor: pointer; transition: background .2s, color .2s, transform .2s; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn.solid { background: var(--cyan); color: var(--ink); }
+  .btn.solid:hover { background: var(--white); border-color: var(--white); }
+  .btn.ghost { color: var(--white); background: transparent; }
+  .btn.ghost:hover { background: rgba(12,192,223,.15); }
+  .hero .disciplines { display: flex; flex-wrap: wrap; gap: 8px 28px; padding-top: clamp(28px, 5vw, 56px); border-top: 1px solid rgba(255,255,255,.12); margin-top: clamp(12px, 3vw, 28px); }
+  .hero .disciplines span { font-family: var(--serif); font-size: clamp(1.4rem, 2.6vw, 2.2rem); color: var(--on-ink); }
+  .hero .disciplines span:not(:last-child)::after { content: "·"; color: var(--cyan); margin-left: 28px; }
+  @media (max-width: 600px) { .btn { width: 100%; } .hero .disciplines span:not(:last-child)::after { margin-left: 18px; } .hero .disciplines { gap: 8px 18px; } }
+
+  /* ---------- Marquee ---------- */
+  .marquee { background: var(--cyan); color: var(--ink); overflow: hidden; padding-block: 16px; }
+  .marquee .track { display: flex; gap: 56px; width: max-content; animation: slide 38s linear infinite; }
+  .marquee span { font-family: var(--serif); font-size: clamp(1.3rem, 2.4vw, 1.9rem); white-space: nowrap; }
+  .marquee span b { font-weight: 600; }
+  .marquee span i { font-style: italic; }
+  @keyframes slide { to { transform: translateX(-50%); } }
+  .marquee:hover .track { animation-play-state: paused; }
+
+  /* ---------- One view (interactive diagram) ---------- */
+  .oneview { background: var(--white); padding-block: clamp(72px, 10vw, 130px); }
+  .oneview .grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(36px, 6vw, 90px); align-items: center; }
+  .oneview h2 { font-size: clamp(2.2rem, 4.4vw, 3.8rem); margin: 18px 0 22px; }
+  .oneview .intro { color: var(--muted); max-width: 34em; }
+  .venn-wrap { position: relative; min-width: 0; }
+  .venn { width: 100%; max-width: 540px; height: auto; display: block; margin: 0 auto; overflow: visible; }
+  .venn .ring { fill: none; stroke: var(--paper); stroke-width: 34; cursor: pointer; pointer-events: stroke; transition: stroke .35s; }
+  .venn .ring:hover { stroke: #e3eff4; }
+  .venn .ring.on { stroke: var(--cyan); }
+  .venn .ring.on + .ring-t { fill: var(--ink); }
+  .venn .c { fill: var(--cyan); fill-opacity: .1; stroke: none; cursor: pointer; transition: fill-opacity .35s, stroke .35s; }
+  .venn .c:hover { fill-opacity: .16; }
+  .venn .c.on { fill-opacity: .55; }
+  .venn .lbl { font-family: var(--serif); font-size: 22px; fill: var(--navy); text-anchor: middle; pointer-events: none; }
+  .venn .core { fill: var(--navy); cursor: pointer; transition: fill .3s; }
+  .venn .core.on { fill: var(--cyan-deep); }
+  .venn .core-t { font-family: var(--sans); font-weight: 800; font-size: 21px; letter-spacing: 4px; fill: var(--white); text-anchor: middle; pointer-events: none; }
+  .venn .ring-t { font-family: var(--sans); font-weight: 700; font-size: 11px; fill: var(--muted); pointer-events: none; transition: fill .35s; }
+  .switch { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+  .switch button { font-weight: 600; font-size: .82rem; color: var(--navy); background: var(--paper); border: 1px solid var(--line); border-radius: 999px; padding: 9px 16px; cursor: pointer; transition: background .2s, color .2s, border-color .2s; }
+  .switch button[aria-pressed="true"] { background: var(--navy); color: var(--white); border-color: var(--navy); }
+  .panel { margin-top: 26px; border-left: 3px solid var(--cyan); padding: 4px 0 4px 22px; min-height: 230px; }
+  .panel .tag { font-weight: 700; font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--cyan-deep); }
+  .panel h3 { font-family: var(--serif); font-size: clamp(1.6rem, 2.4vw, 2.1rem); line-height: 1.15; margin: 6px 0 10px; }
+  .panel p { color: var(--muted); max-width: 32em; }
+  .panel ul { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .panel li { font-size: .82rem; font-weight: 600; padding: 6px 12px; border-radius: 6px; background: var(--paper); color: var(--navy); }
+  .panel.swap { animation: swap .45s ease; }
+  @keyframes swap { from { transform: translateY(8px); } to { transform: none; } }
+  @media (max-width: 900px) { .oneview .grid { grid-template-columns: 1fr; } }
+
+  /* ---------- Moment selector ---------- */
+  .moment { background: var(--paper); padding-block: clamp(72px, 10vw, 130px); }
+  .moment h2 { font-size: clamp(2.2rem, 4.4vw, 3.8rem); margin: 18px 0 14px; }
+  .moment .sub { color: var(--muted); max-width: 40em; margin-bottom: 36px; }
+  .tabs { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--line); }
+  .tabs button { text-align: left; background: none; border: 0; border-bottom: 3px solid transparent; padding: 18px 20px 18px 0; cursor: pointer; display: grid; gap: 4px; color: var(--muted); transition: color .2s, border-color .3s; min-width: 0; }
+  .tabs button b { font-family: var(--serif); font-weight: 500; font-size: clamp(1.15rem, 1.9vw, 1.6rem); line-height: 1.2; }
+  .tabs button span { font-size: .85rem; }
+  .tabs button[aria-selected="true"] { color: var(--navy); border-bottom-color: var(--cyan); }
+  .tabs button:hover { color: var(--navy); }
+  .stage { display: grid; grid-template-columns: 1.2fr 1fr; gap: clamp(28px, 5vw, 64px); padding-top: 40px; }
+  .stage h4 { font-weight: 700; font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--cyan-deep); margin: 0 0 16px; }
+  .chal-list { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .chal { background: var(--white); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; display: grid; gap: 4px; align-content: start; min-width: 0; animation: rise .5s both; }
+  .chal b { font-size: 1rem; }
+  .chal span { font-size: .9rem; color: var(--muted); }
+  .help { display: grid; gap: 12px; }
+  .help li { display: grid; grid-template-columns: 34px 1fr; gap: 14px; align-items: start; padding: 16px 0; border-bottom: 1px solid var(--line); animation: rise .5s both; }
+  .help li i { width: 34px; height: 34px; border-radius: 50%; background: var(--navy); color: var(--white); display: grid; place-items: center; font-style: normal; font-weight: 800; font-size: .8rem; }
+  .help li b { display: block; }
+  .help li span { font-size: .9rem; color: var(--muted); }
+  .stage .btn { margin-top: 22px; background: var(--navy); border-color: var(--navy); color: var(--white); }
+  .stage .btn:hover { background: var(--cyan); border-color: var(--cyan); color: var(--ink); }
+  @keyframes rise { from { transform: translateY(10px); } to { transform: none; } }
+  @media (max-width: 900px) { .stage { grid-template-columns: 1fr; } }
+  @media (max-width: 640px) { .tabs { grid-template-columns: 1fr; } .tabs button { padding-right: 0; } .chal-list { grid-template-columns: 1fr; } }
+
+  /* ---------- Cinematic band ---------- */
+  .band { position: relative; height: clamp(240px, 40vw, 520px); overflow: hidden; background: var(--ink); }
+  .band-img { position: absolute; inset: -18% 0; background: url("/assets/stands.webp") center / cover no-repeat; will-change: transform; }
+  .band::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, var(--paper) 0%, rgba(6,26,38,.35) 22%, rgba(6,26,38,.35) 70%, var(--ink) 100%); }
+  .band-t { position: absolute; z-index: 1; left: 50%; top: 50%; translate: -50% -50%; width: max-content; max-width: calc(100% - 32px); text-align: center; font-family: var(--serif); font-style: italic; font-size: clamp(1.8rem, 5vw, 4.4rem); color: var(--white); text-shadow: 0 4px 30px rgba(6,26,38,.6); }
+
+  /* ---------- Signature sectors ---------- */
+  .sectors { background: var(--ink); color: var(--white); padding-block: clamp(72px, 10vw, 130px); }
+  .sectors .kicker { color: var(--cyan); }
+  .sectors h2 { font-size: clamp(2.2rem, 4.4vw, 3.8rem); margin: 18px 0 40px; max-width: 16ch; }
+  .sectors h2 em { color: var(--cyan); }
+  .split { display: flex; gap: 16px; min-height: 420px; }
+  .sector { position: relative; flex: 1; border-radius: 20px; overflow: hidden; padding: 32px; display: flex; flex-direction: column; justify-content: flex-end; gap: 14px; transition: flex .6s cubic-bezier(.2,.8,.2,1); border: 1px solid rgba(12,192,223,.3); min-width: 0; isolation: isolate; }
+  .sector:hover, .sector:focus-within { flex: 1.6; }
+  .sector canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; }
+  .sector .ph { position: absolute; inset: 0; z-index: -2; background-position: center 40%; background-size: cover; transform: scale(1.02); transition: transform 1.2s cubic-bezier(.2,.8,.2,1); }
+  .sector .ph::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(6,26,38,.2) 0%, rgba(6,26,38,.72) 38%, rgba(6,26,38,.97) 62%); }
+  .sector:hover .ph, .sector:focus-within .ph { transform: scale(1.08); }
+  .sector .ph-bright { filter: brightness(1.35) saturate(1.1); }
+  .sector .ph-bright::after { background: linear-gradient(to bottom, rgba(6,26,38,0) 0%, rgba(6,26,38,.55) 38%, rgba(6,26,38,.94) 62%); }
+  .sector .ph-top { inset: 0 0 30% 0; background-size: cover; background-position: center 40%; background-repeat: no-repeat; -webkit-mask-image: linear-gradient(#000 45%, transparent); mask-image: linear-gradient(#000 45%, transparent); }
+  .sector .ph-top::after { background: linear-gradient(to bottom, rgba(6,26,38,.1), rgba(6,26,38,.55)); }
+  .sector .num { position: absolute; top: 26px; left: 32px; font-family: var(--serif); font-style: italic; font-size: 1rem; color: var(--cyan); }
+  .sector h3 { font-family: var(--serif); font-weight: 500; font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1; }
+  .sector p { color: var(--on-ink); max-width: 30em; }
+  .sector ul { display: flex; flex-wrap: wrap; gap: 8px; }
+  .sector li { font-size: .78rem; font-weight: 600; letter-spacing: .04em; padding: 6px 12px; border: 1px solid rgba(255,255,255,.25); border-radius: 999px; color: var(--on-ink); }
+  .also { margin-top: 26px; color: var(--on-ink-muted); font-family: var(--serif); font-style: italic; font-size: 1.15rem; }
+  @media (max-width: 760px) { .split { flex-direction: column; min-height: 0; } .sector { min-height: 320px; } .sector:hover, .sector:focus-within { flex: 1; } }
+
+  /* ---------- Approach: vertical scroll drives a horizontal track ---------- */
+  .approach { background: var(--white); }
+  .h-story { position: relative; height: 320vh; }
+  .h-pin { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; display: flex; flex-direction: column; justify-content: center; gap: clamp(28px, 5vh, 52px); padding-top: 70px; }
+  .h-head { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 20px 40px; width: 100%; }
+  .approach h2 { font-size: clamp(2.2rem, 4.4vw, 3.8rem); margin-top: 18px; }
+  .h-progress { width: min(260px, 30vw); height: 2px; background: var(--line); position: relative; }
+  .h-progress span { position: absolute; inset: 0 auto 0 0; width: 0; background: var(--cyan); }
+  .h-count { font-family: var(--serif); font-style: italic; color: var(--muted); font-size: 1.1rem; margin-bottom: 10px; font-variant-numeric: tabular-nums; }
+  .h-track { display: flex; gap: 22px; padding-left: max(16px, calc((100vw - 1240px) / 2 + 16px)); padding-right: 40vw; will-change: transform; }
+  .h-card { flex: 0 0 min(400px, 32vw); min-height: min(380px, 46vh); border: 1px solid var(--line); border-radius: 22px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between; gap: 22px; background: var(--white); transition: background .5s, color .5s, border-color .5s, transform .5s; }
+  .h-card .h-num { font-family: var(--serif); font-size: clamp(3.6rem, 7vw, 6rem); line-height: .9; color: var(--cyan); }
+  .h-card h3 { font-family: var(--serif); font-weight: 500; font-size: clamp(1.8rem, 2.6vw, 2.4rem); line-height: 1.05; }
+  .h-card p { color: var(--muted); }
+  .h-card p b { display: block; color: inherit; font-weight: 600; margin-bottom: 6px; }
+  .h-card.on { background: var(--ink); color: var(--white); border-color: var(--ink); transform: translateY(-8px); }
+  .h-card.on p { color: var(--on-ink-muted); }
+  .h-card.on p b { color: var(--white); }
+  @media (max-width: 900px) {
+    .h-story { height: auto; }
+    .h-pin { position: static; height: auto; overflow: visible; padding-block: 72px; }
+    .h-head { grid-template-columns: 1fr; }
+    .h-progress, .h-count { display: none; }
+    .h-track { flex-direction: column; padding-right: max(16px, env(safe-area-inset-right, 0px)); transform: none !important; }
+    .h-card { flex: none; min-height: 0; }
+  }
+
+  /* ---------- Diagnostic ---------- */
+  .diag { background: var(--paper); padding-block: clamp(72px, 10vw, 130px); }
+  .diag-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(32px, 6vw, 90px); align-items: start; }
+  .diag h2 { font-size: clamp(2.2rem, 4.4vw, 3.8rem); margin: 18px 0 18px; }
+  .diag .intro { color: var(--muted); max-width: 30em; }
+  .diag-card { background: var(--ink); color: var(--white); border-radius: 24px; padding: clamp(24px, 4vw, 44px); min-height: 440px; display: flex; flex-direction: column; gap: 22px; position: relative; overflow: hidden; min-width: 0; }
+  .diag-card::before { content: ""; position: absolute; right: -120px; top: -120px; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(12,192,223,.25), transparent 70%); pointer-events: none; }
+  .d-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: .72rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--on-ink-muted); }
+  .d-bar { display: flex; gap: 6px; }
+  .d-bar i { width: 34px; height: 3px; border-radius: 2px; background: rgba(255,255,255,.15); }
+  .d-bar i.done { background: var(--cyan); }
+  .d-q { font-family: var(--serif); font-weight: 500; font-size: clamp(1.6rem, 2.8vw, 2.4rem); line-height: 1.12; }
+  .d-opts { display: grid; gap: 10px; }
+  .d-opts button { text-align: left; font: 500 1rem var(--sans); color: var(--white); background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.14); border-radius: 14px; padding: 16px 18px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 14px; transition: background .2s, border-color .2s, transform .2s; }
+  .d-opts button::after { content: "→"; color: var(--cyan); transition: transform .2s; }
+  .d-opts button:hover { background: rgba(12,192,223,.12); border-color: var(--cyan); }
+  .d-opts button:hover::after { transform: translateX(4px); }
+  .d-back { align-self: flex-start; background: none; border: 0; color: var(--on-ink-muted); font: 600 .82rem var(--sans); cursor: pointer; padding: 0; margin-top: auto; }
+  .d-back:hover { color: var(--white); }
+  .d-res-tag { font-size: .72rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--cyan); }
+  .d-res h3 { font-family: var(--serif); font-weight: 500; font-size: clamp(2rem, 3.4vw, 2.9rem); line-height: 1.05; margin: 8px 0 12px; }
+  .d-res > p { color: var(--on-ink); }
+  .d-plan { display: grid; gap: 0; margin-top: 18px; border-top: 1px solid rgba(255,255,255,.12); }
+  .d-plan li { display: grid; grid-template-columns: 7.5rem 1fr; gap: 14px; padding: 13px 0; border-bottom: 1px solid rgba(255,255,255,.12); font-size: .93rem; }
+  .d-plan li b { color: var(--cyan); font-weight: 600; font-variant-numeric: tabular-nums; }
+  .d-plan li span { color: var(--on-ink); }
+  .d-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+  .d-note { font-size: .78rem; color: var(--on-ink-muted); margin-top: 10px; }
+  .d-anim { animation: dIn .5s cubic-bezier(.2,.8,.2,1); }
+  @keyframes dIn { from { transform: translateX(18px); } to { transform: none; } }
+  @media (max-width: 900px) { .diag-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 480px) { .d-plan li { grid-template-columns: 1fr; gap: 2px; } }
+
+  /* ---------- Cursor (mouse only) ---------- */
+  .cursor { position: fixed; left: 0; top: 0; width: 34px; height: 34px; margin: -17px 0 0 -17px; border: 1.5px solid var(--cyan); border-radius: 50%; pointer-events: none; z-index: 60; opacity: 0; transition: width .25s, height .25s, margin .25s, background .25s, opacity .3s; mix-blend-mode: difference; }
+  .cursor.show { opacity: 1; }
+  .cursor.big { width: 72px; height: 72px; margin: -36px 0 0 -36px; background: rgba(12,192,223,.25); }
+
+  /* ---------- Why IVCG ---------- */
+  .why { background: var(--white); padding-block: clamp(72px, 10vw, 130px); }
+  .why .head { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 60px; align-items: end; margin-bottom: 48px; }
+  .why h2 { font-size: clamp(2.2rem, 4.4vw, 3.8rem); margin-top: 18px; }
+  .why .head p { color: var(--muted); }
+  .why-list { border-top: 1px solid var(--navy); }
+  .why-row { display: grid; grid-template-columns: 1fr 1.4fr auto; gap: 24px; align-items: center; padding: 26px 0; border-bottom: 1px solid var(--line); transition: padding .3s, background .3s; }
+  .why-row b { font-family: var(--serif); font-weight: 500; font-size: clamp(1.5rem, 2.6vw, 2.2rem); line-height: 1.1; transition: color .3s, transform .3s; }
+  .why-row span { color: var(--muted); }
+  .why-row i { font-style: normal; color: var(--cyan-deep); font-size: 1.4rem; transition: transform .3s; }
+  .why-row:hover b { color: var(--cyan-deep); transform: translateX(8px); }
+  .why-row:hover i { transform: rotate(-45deg); }
+  @media (max-width: 760px) { .why .head { grid-template-columns: 1fr; } .why-row { grid-template-columns: 1fr; gap: 6px; } .why-row i { display: none; } }
+
+  /* ---------- Contact ---------- */
+  .contact { background: var(--ink); color: var(--white); padding-block: clamp(72px, 10vw, 130px); position: relative; overflow: hidden; }
+  .contact .grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(36px, 6vw, 90px); align-items: start; }
+  .contact .kicker { color: var(--cyan); }
+  .contact h2 { font-size: clamp(2.6rem, 5.6vw, 4.8rem); margin: 18px 0 20px; }
+  .contact h2 em { color: var(--cyan); }
+  .contact .lede { color: var(--on-ink-muted); max-width: 30em; }
+  .details { display: grid; gap: 16px; margin-top: 34px; }
+  .details dt { font-weight: 700; font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; color: var(--cyan); }
+  .details dd { margin: 2px 0 0; color: var(--on-ink); user-select: all; overflow-wrap: anywhere; }
+  form { display: grid; gap: 18px; min-width: 0; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  label { display: grid; gap: 6px; font-size: .72rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--on-ink-muted); min-width: 0; }
+  input, textarea { font: 400 1.05rem var(--sans); color: var(--white); background: transparent; border: 0; border-bottom: 1px solid rgba(255,255,255,.25); padding: 10px 0; width: 100%; border-radius: 0; transition: border-color .2s; }
+  input:focus, textarea:focus { outline: none; border-bottom-color: var(--cyan); }
+  textarea { min-height: 90px; resize: vertical; }
+  form .btn { justify-self: start; }
+  .sent { color: var(--cyan); font-weight: 600; }
+  .sent.err { color: #ffb4a8; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+  .fine { font-size: .78rem; color: var(--on-ink-muted); }
+  .fine a { color: var(--on-ink); text-decoration: underline; text-underline-offset: 3px; }
+  @media (max-width: 860px) { .contact .grid { grid-template-columns: 1fr; } }
+  @media (max-width: 480px) { .two { grid-template-columns: 1fr; } form .btn { justify-self: stretch; } }
+
+  footer { background: #04121b; color: var(--on-ink-muted); font-size: .82rem; }
+  footer .wrap { display: grid; gap: 22px; padding-block: 40px 30px; }
+  .f-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 18px; padding-bottom: 22px; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .f-top img { width: 170px; height: auto; display: block; }
+  .f-social { display: flex; align-items: center; gap: 18px; }
+  .f-social > a { color: var(--on-ink); display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid rgba(255,255,255,.18); border-radius: 50%; transition: color .2s, border-color .2s; }
+  .f-social > a:hover { color: var(--cyan); border-color: var(--cyan); }
+  .f-social .lang a { padding: 6px 7px; border-radius: 6px; }
+  .f-social .lang a[aria-current] { color: var(--white); background: rgba(255,255,255,.1); }
+  .f-links { display: flex; flex-wrap: wrap; gap: 8px 26px; }
+  .f-links a { color: var(--on-ink); }
+  .f-links a:hover { color: var(--cyan); }
+  .f-legal { max-width: 70em; }
+
+  /* Elements drift up slightly as they enter; they are always visible */
+  .lift { transition: transform .9s cubic-bezier(.2,.8,.2,1); }
+  .lift.pre { transform: translateY(24px); }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .lift.pre { transform: none; }
+  }
+</style>
 </head>
 <body>
-<header class="menu">
+<header class="top">
   <div class="wrap">
-    <a class="logo" href="#top"><img src="/assets/logo.svg" alt="Innovation Vision Consulting Group" width="340" height="85"></a>
-    <div class="menu-right">
-      <nav id="nav">
-        <a href="#about">À propos</a>
-        <a href="#services">Services</a>
-        <a href="#clients">Clients</a>
-        <a href="#challenges">Enjeux</a>
-        <a href="#approach">Approche</a>
-        <a href="#why">Pourquoi IVCG</a>
-        <a href="#contact" class="talk">CONTACT</a>
-      </nav>
-      <div class="lang" aria-label="Langue"><a href="/" lang="en" hreflang="en">EN</a><span aria-hidden="true">|</span><a href="/fr/" aria-current="true">FR</a></div>
-      <button class="menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    </div>
+    <a class="logo" href="#top"><img src="/assets/logo-white.svg" alt="Innovation Vision Consulting Group" width="340" height="85"></a>
+    <nav>
+      <a href="#oneview">À propos</a>
+      <a href="#moment">Clients</a>
+      <a href="#sectors">Secteurs</a>
+      <a href="#approach">Approche</a>
+      <a href="#diagnostic">Diagnostic</a>
+      <a href="#contact" class="cta">Contact</a>
+      <span class="lang"><a href="/" lang="en" hreflang="en">EN</a><a href="/fr/" aria-current="true">FR</a></span>
+    </nav>
   </div>
 </header>
 
 <main>
-  <!-- 01 HERO -->
-  <section class="hero" id="top">
+  <!-- HERO: a pinned scroll story. Scattered particles assemble into the IVCG mark. -->
+  <section class="story" id="top">
+    <div class="pin hero">
+      <div class="hero-photo" aria-hidden="true"></div>
+      <canvas id="field" aria-hidden="true"></canvas>
+      <div class="wrap hero-copy" id="hero-copy">
+        <p class="kicker">Stratégie · Opérations · Finance</p>
+        <h1>Une structure à la hauteur de vos <em>ambitions.</em></h1>
+        <p class="rotator" aria-live="polite">Pour les dirigeants qui <span class="slot"><span class="word" id="word">se lancent</span></span></p>
+        <p class="lede just">IVCG est un cabinet de conseil en stratégie, en opérations et en finance. Nous aidons les organisations à se développer, à se restructurer et à exécuter avec clarté, avec une expertise reconnue dans le sport et le divertissement.</p>
+        <div class="actions">
+          <a class="btn solid magnetic" href="#contact">Engager la conversation <span aria-hidden="true">→</span></a>
+          <a class="btn ghost magnetic" href="#diagnostic">Trouver votre point de départ</a>
+        </div>
+      </div>
+      <div class="beats">
+        <p class="beat" data-at="0.2">La croissance apporte de la <em>complexité.</em></p>
+        <p class="beat" data-at="0.45">Équipes, partenaires, chiffres et échéances, <em>tout à la fois.</em></p>
+        <p class="beat" data-at="0.7">Nous apportons la <em>structure.</em><span>Un seul partenaire pour la stratégie, les opérations et la finance.</span></p>
+      </div>
+      <div class="cue" id="cue" aria-hidden="true"><span>Défiler</span><i></i></div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span><b>Une vision</b> <i>de dirigeant.</i></span><span><b>Une méthode</b> <i>analytique.</i></span><span><b>Une discrétion</b> <i>par défaut.</i></span><span><b>Une exécution</b> <i>concrète.</i></span>
+      <span><b>Une vision</b> <i>de dirigeant.</i></span><span><b>Une méthode</b> <i>analytique.</i></span><span><b>Une discrétion</b> <i>par défaut.</i></span><span><b>Une exécution</b> <i>concrète.</i></span>
+    </div>
+  </div>
+
+  <!-- ONE VIEW -->
+  <section class="oneview" id="oneview">
+    <div class="wrap grid">
+      <div class="lift">
+        <p class="kicker">Qui sommes-nous</p>
+        <h2 class="display">Un seul partenaire pour la stratégie, les opérations et la <em>finance.</em></h2>
+        <p class="intro just">Innovation Vision Consulting Group (IVCG) est un cabinet de conseil basé à Miami. Nous accompagnons fondateurs, dirigeants et conseils d’administration aux moments qui façonnent une organisation : lancement, croissance, levée de fonds, fusion, restructuration ou changement de direction.</p>
+        <div class="switch" role="group" aria-label="Découvrir nos pôles">
+          <button type="button" data-k="core" aria-pressed="true">Vision intégrée</button>
+          <button type="button" data-k="strategy" aria-pressed="false">Stratégie</button>
+          <button type="button" data-k="operations" aria-pressed="false">Opérations</button>
+          <button type="button" data-k="finance" aria-pressed="false">Finance</button>
+          <button type="button" data-k="impl" aria-pressed="false">Mise en œuvre</button>
+        </div>
+        <div class="panel" id="panel" aria-live="polite"></div>
+      </div>
+      <div class="venn-wrap lift">
+        <svg class="venn" viewBox="0 0 600 600" role="img" aria-label="IVCG au centre, entouré de la stratégie, des opérations et de la finance, le tout porté par l’accompagnement à la mise en œuvre">
+          <defs><path id="ringpath" d="M 300 300 m -250 0 a 250 250 0 1 1 500 0 a 250 250 0 1 1 -500 0"></path></defs>
+          <circle class="ring" id="ring" cx="300" cy="300" r="250"></circle>
+          <text class="ring-t" dy="4"><textPath href="#ringpath" textLength="1560" lengthAdjust="spacing">MISE EN ŒUVRE · MISE EN ŒUVRE · MISE EN ŒUVRE · MISE EN ŒUVRE · MISE EN ŒUVRE ·</textPath></text>
+          <path class="c" data-k="strategy" d="M 124.54 192.06 A 206 206 0 0 1 475.46 192.06 L 381.77 249.70 A 96 96 0 0 0 218.23 249.70 Z"></path>
+          <path class="c" data-k="finance" d="M 481.21 202.02 A 206 206 0 0 1 305.75 505.92 L 302.68 395.96 A 96 96 0 0 0 384.45 254.34 Z"></path>
+          <path class="c" data-k="operations" d="M 294.25 505.92 A 206 206 0 0 1 118.79 202.02 L 215.55 254.34 A 96 96 0 0 0 297.32 395.96 Z"></path>
+          <text class="lbl" x="300.0" y="157.0">Stratégie</text>
+          <text class="lbl" x="430.8" y="383.5">Finance</text>
+          <text class="lbl" x="169.2" y="383.5">Opérations</text>
+          <circle class="core on" data-k="core" cx="300" cy="300" r="76"></circle>
+          <text class="core-t" x="300" y="307">IVCG</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOMENT SELECTOR -->
+  <section class="moment" id="moment">
     <div class="wrap">
-      <div class="hero-copy">
-        <p class="eyebrow">Stratégie · Opérations · Finance</p>
-        <h1>Une structure à la hauteur de vos <span>ambitions.</span></h1>
-        <p class="lede">IVCG est un cabinet de conseil en stratégie, en opérations et en finance. Nous aidons les organisations à se développer, à se restructurer et à exécuter avec clarté, avec une expertise reconnue dans le sport et le divertissement.</p>
-        <div class="btns">
-          <a class="btn btn-solid" href="#contact"><span>Engager la conversation</span> <span aria-hidden="true">⟶</span></a>
-          <a class="btn btn-line" href="#services">Découvrir nos services</a>
+      <div class="lift">
+        <p class="kicker">Nos clients</p>
+        <h2 class="display">Des organisations à des <em>moments décisifs.</em></h2>
+        <p class="sub">Choisissez le moment qui vous ressemble pour voir par où nous commençons généralement.</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Choisissez votre situation">
+        <button type="button" role="tab" id="t-founders" aria-selected="true" aria-controls="stage" data-m="founders"><b>Fondateurs et nouveaux projets</b><span>Transformer une idée ou un projet en une entreprise structurée et finançable.</span></button>
+        <button type="button" role="tab" id="t-growing" aria-selected="false" aria-controls="stage" data-m="growing" tabindex="-1"><b>Entreprises en croissance</b><span>Se développer sans perdre la maîtrise des opérations ni des marges.</span></button>
+        <button type="button" role="tab" id="t-transition" aria-selected="false" aria-controls="stage" data-m="transition" tabindex="-1"><b>Organisations en transition</b><span>Fusions, restructurations, changements de direction, nouveaux marchés.</span></button>
+      </div>
+      <div class="stage" id="stage" role="tabpanel" aria-labelledby="t-founders">
+        <div>
+          <h4>Les enjeux que nous résolvons</h4>
+          <div class="chal-list" id="chal-list"></div>
+        </div>
+        <div>
+          <h4>Comment nous aidons</h4>
+          <ul class="help" id="help"></ul>
+          <a class="btn magnetic" href="#contact">Parler de votre situation <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 02 WHO WE ARE -->
-  <section class="about" id="about">
+
+  <!-- SECTORS -->
+  <section class="sectors" id="sectors">
     <div class="wrap">
-      <div class="about-grid">
-        <div class="about-copy">
-          <p class="eyebrow">Qui sommes-nous</p>
-          <h2 class="h2">Un seul partenaire pour la stratégie, les opérations et la <span>finance.</span></h2>
-          <p class="first">Innovation Vision Consulting Group (IVCG) est un cabinet de conseil basé à Miami. Nous accompagnons fondateurs, dirigeants et conseils d’administration aux moments qui façonnent une organisation : lancement, croissance, levée de fonds, fusion, restructuration ou changement de direction.</p>
-          <p>La plupart des cabinets ne traitent qu’une partie du problème. Nous relions les trois : la direction que prend l’organisation, son fonctionnement réel, et la solidité de ses chiffres. Cette vision intégrée nous permet d’identifier les causes profondes, pas seulement les symptômes, et de bâtir des plans qui fonctionnent concrètement.</p>
-          <p>Notre expertise de référence porte sur le sport et le divertissement, des secteurs où le public est exigeant, où les échéances ne bougent pas et où l’exécution est décisive. Cette même rigueur sert les organisations en croissance de tous les secteurs.</p>
-          <p>Nous agissons en partenaire stratégique de long terme, pas en agence traditionnelle.</p>
-        </div>
-        <dl class="traits">
-          <div class="trait"><b>Dirigeant</b><span>Une vision de dirigeant.</span></div>
-          <div class="trait"><b>Analytique</b><span>Une méthode analytique.</span></div>
-          <div class="trait"><b>Discret</b><span>Une discrétion par défaut.</span></div>
-          <div class="trait"><b>Concret</b><span>Une exécution concrète.</span></div>
-        </dl>
+      <p class="kicker">Secteurs de référence</p>
+      <h2 class="display">Là où les échéances ne bougent pas et où <em>l’exécution est décisive.</em></h2>
+      <div class="split">
+        <article class="sector" tabindex="0">
+          <div class="ph" style="background-image: url('/assets/stadium-field.webp')" aria-hidden="true"></div>
+          <span class="num">i.</span>
+          <h3>Sport</h3>
+          <p>Le public est exigeant, les saisons sont fixes et chaque décision est publique. Nous structurons l’entreprise derrière le jeu.</p>
+          <ul><li>Équipes</li><li>Clubs</li><li>Associations de supporters</li><li>Ligues</li><li>Fournisseurs d’événements sportifs</li></ul>
+        </article>
+        <article class="sector" tabindex="0">
+          <div class="ph ph-bright" style="background-image: url('/assets/concert.webp'); background-position: 50% 55%" aria-hidden="true"></div>
+          <span class="num">ii.</span>
+          <h3>Événementiel &amp; divertissement</h3>
+          <p>De nombreuses équipes, partenaires et échéances en même temps, sans seconde prise. Nous aidons les entreprises derrière le spectacle à fonctionner avec précision.</p>
+          <ul><li>Cérémonies</li><li>Concerts &amp; musique</li><li>Événements d’entreprise</li><li>Production expérientielle</li><li>Production technique</li></ul>
+        </article>
       </div>
+      <p class="also">Cette même rigueur sert les organisations en croissance de tous les secteurs.</p>
     </div>
   </section>
 
-  <!-- 03 SERVICES -->
-  <section class="services" id="services">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Services</p>
-        <h2 class="h2">Nos <span>services</span></h2>
-      </div>
-      <div class="pillars">
-        <article class="pillar">
-          <p class="tag">Pôle 01</p>
-          <h3>Stratégie &amp; croissance</h3>
-          <p>Une direction claire et des décisions fondées sur des faits.</p>
-          <ul>
-            <li>Stratégie d’entreprise</li>
-            <li>Planification de la croissance</li>
-            <li>Conseil aux dirigeants</li>
-          </ul>
-        </article>
-        <article class="pillar">
-          <p class="tag">Pôle 02</p>
-          <h3>Opérations &amp; organisation</h3>
-          <p>Des rôles clairs, des flux efficaces et une vision lucide des risques.</p>
-          <ul>
-            <li>Conseil opérationnel</li>
-            <li>Analyse organisationnelle</li>
-            <li>Amélioration des processus</li>
-            <li>Audits opérationnels</li>
-            <li>Identification des risques</li>
-          </ul>
-        </article>
-        <article class="pillar">
-          <p class="tag">Pôle 03</p>
-          <h3>Finance &amp; transactions</h3>
-          <p>Des fondations financières qui soutiennent la stratégie et convainquent investisseurs et partenaires.</p>
-          <ul>
-            <li>Planification et modélisation financières</li>
-            <li>Levée de fonds et préparation aux investisseurs</li>
-            <li>Structuration de transactions et de projets</li>
-            <li>Fusions-acquisitions et restructuration</li>
-          </ul>
-        </article>
-        <article class="pillar">
-          <p class="tag">Pôle 04</p>
-          <h3>Accompagnement à la mise en œuvre</h3>
-          <p>Nous ne nous arrêtons pas aux recommandations : nous travaillons aux côtés de vos équipes jusqu’à ce que le changement soit en place.</p>
-          <ul>
-            <li>Soutien opérationnel sur le terrain</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- 04 WHO WE WORK WITH -->
-  <section class="serve" id="clients">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Nos clients</p>
-        <h2 class="h2">Des organisations à des <span>moments décisifs</span></h2>
-      </div>
-      <p class="group-label">Par situation</p>
-      <div class="sit-grid">
-        <div class="sit"><h3>Fondateurs et nouveaux projets</h3><p>Transformer une idée ou un projet en une entreprise structurée et finançable.</p></div>
-        <div class="sit"><h3>Entreprises en croissance</h3><p>Se développer sans perdre la maîtrise des opérations ni des marges.</p></div>
-        <div class="sit"><h3>Organisations en transition</h3><p>Fusions, restructurations, changements de direction, nouveaux marchés.</p></div>
-      </div>
-      <p class="group-label">Secteurs de référence</p>
-      <div class="sector-grid">
-        <div class="sector"><h3>Sport</h3><p>Clubs, équipes, associations de supporters, ligues et fournisseurs d’événements sportifs.</p></div>
-        <div class="sector"><h3>Événementiel et divertissement</h3><p>Cérémonies, concerts et musique, événements d’entreprise, production expérientielle et technique.</p></div>
-      </div>
-      <p class="serve-note">Nous accompagnons également des organisations en croissance dans d’autres secteurs.</p>
-    </div>
-  </section>
-
-  <!-- 05 CHALLENGES -->
-  <section class="challenges" id="challenges">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Les enjeux que nous résolvons</p>
-        <h2 class="h2">Là où nous faisons <span>la différence</span></h2>
-      </div>
-      <div class="chal-grid">
-        <div class="chal"><h3>Croissance rapide</h3><p>Une structure à la hauteur de l’ambition.</p></div>
-        <div class="chal"><h3>Complexité opérationnelle</h3><p>De nombreuses équipes, partenaires et échéances en même temps.</p></div>
-        <div class="chal"><h3>Levée de fonds</h3><p>Des chiffres et un projet qui inspirent confiance aux investisseurs.</p></div>
-        <div class="chal"><h3>Fusions-acquisitions</h3><p>Structurer la transaction et réussir l’intégration.</p></div>
-        <div class="chal"><h3>Restructuration</h3><p>Remettre l’organisation sur des bases solides.</p></div>
-        <div class="chal"><h3>Gouvernance</h3><p>Une autorité claire et des décisions saines quand les enjeux sont élevés.</p></div>
-        <div class="chal"><h3>Transitions de direction</h3><p>La succession du fondateur sans perdre ce qui fonctionne.</p></div>
-        <div class="chal"><h3>Expansion internationale</h3><p>Une exécution cohérente sur tous les marchés.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 06 APPROACH -->
+  <!-- APPROACH -->
   <section class="approach" id="approach">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Notre approche</p>
-        <h2 class="h2">De l’analyse à <span>l’exécution</span></h2>
+    <div class="h-story" id="hstory">
+      <div class="h-pin">
+        <div class="wrap h-head">
+          <div>
+            <p class="kicker">Notre approche</p>
+            <h2 class="display">De l’analyse à <em>l’exécution.</em></h2>
+          </div>
+          <div>
+            <p class="h-count" id="hcount">Étape 1 sur 5</p>
+            <div class="h-progress" aria-hidden="true"><span id="hbar"></span></div>
+          </div>
+        </div>
+        <div class="h-track" id="htrack">
+          <article class="h-card on"><span class="h-num">01</span><div><h3>Découvrir</h3><p><b>Entretiens et observation sur le terrain.</b>Nous rencontrons la direction et les équipes, analysons les chiffres et observons le fonctionnement réel.</p></div></article>
+          <article class="h-card"><span class="h-num">02</span><div><h3>Identifier</h3><p><b>Les schémas entre stratégie, opérations et finances.</b>Nous relions ce que nous avons entendu et vu pour repérer les problèmes récurrents.</p></div></article>
+          <article class="h-card"><span class="h-num">03</span><div><h3>Diagnostiquer</h3><p><b>Les causes profondes, pas les symptômes.</b>Nous nommons ce qui crée réellement les frictions, pour concentrer les efforts là où ils comptent.</p></div></article>
+          <article class="h-card"><span class="h-num">04</span><div><h3>Recommander</h3><p><b>Des recommandations claires et priorisées.</b>Une courte liste de décisions, avec des responsables et un ordre de traitement.</p></div></article>
+          <article class="h-card"><span class="h-num">05</span><div><h3>Exécuter</h3><p><b>Un accompagnement concret jusqu’au résultat.</b>Nous restons aux côtés de vos équipes pendant la mise en place du changement.</p></div></article>
+        </div>
       </div>
-      <ol class="steps">
-        <li class="step"><span class="num">01</span><h3>Découvrir</h3><p>Entretiens et observation sur le terrain.</p></li>
-        <li class="step"><span class="num">02</span><h3>Identifier</h3><p>Les schémas entre stratégie, opérations et finances.</p></li>
-        <li class="step"><span class="num">03</span><h3>Diagnostiquer</h3><p>Les causes profondes, pas les symptômes.</p></li>
-        <li class="step"><span class="num">04</span><h3>Recommander</h3><p>Des recommandations claires et priorisées.</p></li>
-        <li class="step"><span class="num">05</span><h3>Exécuter</h3><p>Un accompagnement concret jusqu’au résultat.</p></li>
-      </ol>
     </div>
   </section>
 
-  <!-- 07 WHY IVCG -->
+  <!-- DIAGNOSTIC -->
+  <section class="diag" id="diagnostic">
+    <div class="wrap diag-grid">
+      <div class="lift">
+        <p class="kicker">Diagnostic en 60 secondes</p>
+        <h2 class="display">Par où <em>commencer</em> ?</h2>
+        <p class="intro just">Trois questions, un point de départ clair. Vos réponses restent dans votre navigateur jusqu’à ce que vous choisissiez de les envoyer.</p>
+      </div>
+      <div class="diag-card" id="diag" aria-live="polite">
+        <div class="d-top"><span>Question 1 sur 3</span><span class="d-bar"><i class="done"></i><i></i><i></i></span></div>
+        <p class="d-q">Où en est votre organisation aujourd’hui ?</p>
+        <div class="d-opts"><button type="button">Lancement d’une nouvelle activité ou d’un projet</button><button type="button">Croissance rapide</button><button type="button">Période de transition</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
   <section class="why" id="why">
     <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Pourquoi IVCG</p>
-        <h2 class="h2">Ce qui nous <span>distingue</span></h2>
+      <div class="head lift">
+        <div>
+          <p class="kicker">Pourquoi IVCG</p>
+          <h2 class="display">Ce qui nous <em>distingue.</em></h2>
+        </div>
+        <p class="just">La plupart des cabinets ne traitent qu’une partie du problème. Nous relions les trois : la direction que prend l’organisation, son fonctionnement réel et la solidité de ses chiffres.</p>
       </div>
-      <div class="why-grid">
-        <div class="why-item"><h3>Intégré</h3><p>Stratégie, opérations et finance avec un seul partenaire.</p></div>
-        <div class="why-item"><h3>Expertise sectorielle</h3><p>Une spécialisation reconnue dans le sport et le divertissement.</p></div>
-        <div class="why-item"><h3>Fondé sur l’analyse</h3><p>Des recommandations appuyées sur des faits, pas des suppositions.</p></div>
-        <div class="why-item"><h3>International</h3><p>Conseil en français, anglais, espagnol et portugais.</p></div>
-        <div class="why-item"><h3>Augmenté par l’IA</h3><p>Des outils analytiques modernes au service du jugement.</p></div>
-        <div class="why-item"><h3>Discret</h3><p>La confidentialité est la règle, pas une option.</p></div>
+      <div class="why-list">
+        <div class="why-row"><b>Intégré</b><span>Stratégie, opérations et finance avec un seul partenaire.</span><i aria-hidden="true">→</i></div>
+        <div class="why-row"><b>Expertise sectorielle</b><span>Une spécialisation reconnue dans le sport et le divertissement.</span><i aria-hidden="true">→</i></div>
+        <div class="why-row"><b>Fondé sur l’analyse</b><span>Des recommandations appuyées sur des faits, pas des suppositions.</span><i aria-hidden="true">→</i></div>
+        <div class="why-row"><b>International</b><span>Conseil en français, anglais, espagnol et portugais.</span><i aria-hidden="true">→</i></div>
+        <div class="why-row"><b>Augmenté par l’IA</b><span>Des outils analytiques modernes au service du jugement.</span><i aria-hidden="true">→</i></div>
+        <div class="why-row"><b>Discret</b><span>La confidentialité est la règle, pas une option.</span><i aria-hidden="true">→</i></div>
       </div>
     </div>
   </section>
 
-  <!-- 08 CONTACT -->
+  <!-- CONTACT -->
   <section class="contact" id="contact">
-    <div class="wrap">
-      <div class="contact-copy">
-        <p class="eyebrow" style="color:var(--cyan)">Contact</p>
-        <h2 class="h2">Parlons de la <span>suite.</span></h2>
+    <div class="wrap grid">
+      <div>
+        <p class="kicker">Contact</p>
+        <h2 class="display">Parlons de la <em>suite.</em></h2>
         <p class="lede">Dites-nous où vous en êtes et où vous voulez aller. Nous répondons sous deux jours ouvrés.</p>
         <dl class="details">
-          <div><dt>Adresse</dt><dd>990 Biscayne Boulevard, Ste 501<br>Miami, FL 33132</dd></div>
+          <div><dt>Adresse</dt><dd>990 Biscayne Boulevard, Ste 501, Miami, FL 33132</dd></div>
           <div><dt>E-mail</dt><dd>contact@ivconsultinggroup.com</dd></div>
           <div><dt>Téléphone</dt><dd>+1 786 548 1743</dd></div>
         </dl>
       </div>
-      <form id="contact-form" novalidate="">
-        <div class="row2">
-          <label for="f-name"><span>Nom</span><input id="f-name" name="name" type="text" autocomplete="name"></label>
-          <label for="f-company"><span>Entreprise</span><input id="f-company" name="company" type="text" autocomplete="organization"></label>
+      <form id="form" action="https://formspree.io/f/xoeeqgao" method="POST">
+        <div class="two">
+          <label for="c-name">Nom<input id="c-name" name="name" type="text" autocomplete="name" required></label>
+          <label for="c-company">Entreprise<input id="c-company" name="company" type="text" autocomplete="organization"></label>
         </div>
-        <div class="row2">
-          <label for="f-role"><span>Fonction</span><input id="f-role" name="role" type="text" autocomplete="organization-title"></label>
-          <label for="f-email"><span>E-mail</span><input id="f-email" name="email" type="email" autocomplete="email"></label>
+        <div class="two">
+          <label for="c-role">Fonction<input id="c-role" name="role" type="text" autocomplete="organization-title"></label>
+          <label for="c-email">E-mail<input id="c-email" name="email" type="email" autocomplete="email" required></label>
         </div>
-        <label for="f-msg"><span>Comment pouvons-nous vous aider ?</span><textarea id="f-msg" name="message"></textarea></label>
-        <button class="btn btn-solid" type="submit">Envoyer</button>
-        <p class="form-msg" id="form-msg" hidden="">Merci. Votre messagerie devrait s’ouvrir avec votre message prêt à être envoyé à contact@ivconsultinggroup.com.</p>
+        <label for="c-msg">Comment pouvons-nous vous aider ?<textarea id="c-msg" name="message" required></textarea></label>
+        <button class="btn solid magnetic" type="submit">Envoyer <span aria-hidden="true">→</span></button>
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+        <p class="fine">En envoyant ce formulaire, vous acceptez notre <a href="/fr/confidentialite.html">politique de confidentialité</a>.</p>
+        <p class="sent" id="sent" role="status" hidden></p>
       </form>
     </div>
   </section>
@@ -244,45 +588,348 @@
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Innovation Vision Consulting Group. IVCG est le nom commercial d’IVC Blueprint LLC, société à responsabilité limitée de Floride.</span>
-    <nav>
-      <a href="#services">Services</a><a href="#approach">Approche</a><a href="#why">Pourquoi IVCG</a><a href="#contact">Contact</a>
+    <div class="f-top">
+      <img src="/assets/logo-white.svg" alt="Innovation Vision Consulting Group" width="340" height="85">
+      <div class="f-social">
+        <a href="https://www.linkedin.com/company/ivconsultinggroup" target="_blank" rel="noopener" aria-label="IVCG sur LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+        <span class="lang"><a href="/" lang="en" hreflang="en">EN</a><a href="/fr/" aria-current="true">FR</a></span>
+      </div>
+    </div>
+    <nav class="f-links" aria-label="Informations légales">
+      <a href="/fr/confidentialite.html">Politique de confidentialité</a><a href="/fr/mentions-legales.html">Mentions légales</a><a href="/fr/conditions.html">Conditions d’utilisation</a><a href="/fr/accessibilite.html">Accessibilité</a>
     </nav>
+    <p class="f-legal">© 2026 Innovation Vision Consulting Group. IVCG est le nom commercial d’IVC Blueprint LLC, société à responsabilité limitée de Floride. 990 Biscayne Boulevard, Ste 501, Miami, FL 33132.</p>
   </div>
 </footer>
 
 <script>
-  const menuBtn = document.getElementById("menu-btn");
-  const nav = document.getElementById("nav");
-  menuBtn.addEventListener("click", () => {
-    const open = nav.classList.toggle("open");
-    menuBtn.setAttribute("aria-expanded", open);
-  });
-  nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
-    nav.classList.remove("open");
-    menuBtn.setAttribute("aria-expanded", "false");
-  }));
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  // Underline the menu item for the section on screen
-  const links = [...nav.querySelectorAll("a:not(.talk)")];
-  const watch = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (!e.isIntersecting) return;
-      links.forEach(l => l.classList.toggle("on", l.getAttribute("href") === "#" + e.target.id));
+  /* ---------- Hero story: particles assemble into the IVCG mark as you scroll ---------- */
+  (() => {
+    const story = document.querySelector(".story"), cv = document.getElementById("field"), ctx = cv.getContext("2d");
+    const copy = document.getElementById("hero-copy"), cue = document.getElementById("cue"), photo = document.querySelector(".hero-photo");
+    const beats = [...document.querySelectorAll(".beat")];
+    let w = 0, h = 0, dpr = 1, P = [], targets = null, prog = 0, mx = -999, my = -999, t0 = performance.now();
+    const N = matchMedia("(max-width: 760px)").matches ? 1400 : 2600;
+    const ease = x => x < 0 ? 0 : x > 1 ? 1 : x * x * (3 - 2 * x);
+
+    function size() {
+      dpr = Math.min(devicePixelRatio || 1, 2); w = cv.clientWidth; h = cv.clientHeight;
+      cv.width = w * dpr; cv.height = h * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      place();
+    }
+    function seed() {
+      P = Array.from({ length: N }, () => ({ x: Math.random(), y: Math.random(), s: Math.random() * Math.PI * 2, v: .3 + Math.random() * .7, d: Math.random(), tx: 0, ty: 0, r: Math.random() < .14 ? 2.8 : 1.7 }));
+    }
+    function place() {
+      if (!targets) return;
+      const mobile = w < 760, S = mobile ? Math.min(w * .62, h * .32) : Math.min(h * .62, w * .38);
+      const cx = mobile ? w * .5 : w * .72, cy = mobile ? h * .3 : h * .5;
+      P.forEach((p, i) => { const t = targets[i % targets.length]; p.tx = cx + (t[0] - .5) * S; p.ty = cy + (t[1] - .5) * S; });
+    }
+    function sample(img) {
+      // Read the mark at high resolution, then keep one point per small grid cell.
+      // Even spacing keeps the thin swoosh and the building outlines as visible as the solid parts.
+      const R = 480, oc = document.createElement("canvas"); oc.width = oc.height = R;
+      const o = oc.getContext("2d"); o.drawImage(img, 0, 0, R, R);
+      const d = o.getImageData(0, 0, R, R).data, ink = [];
+      for (let y = 0; y < R; y++) for (let x = 0; x < R; x++) if (d[(y * R + x) * 4 + 3] > 90) ink.push(x, y);
+      const cellsFor = g => { const seen = new Map(); for (let k = 0; k < ink.length; k += 2) { const key = ((ink[k + 1] / g) | 0) * 10000 + ((ink[k] / g) | 0); if (!seen.has(key)) seen.set(key, [ink[k] + g / 2, ink[k + 1] + g / 2]); } return seen; };
+      let lo = 1, hi = 40, cells = cellsFor(lo);
+      while (hi - lo > .25) { const mid = (lo + hi) / 2, c = cellsFor(mid); if (c.size > N) { lo = mid; cells = c; } else hi = mid; }
+      const pts = [...cells.values()].map(([x, y]) => [Math.min(x, R) / R, Math.min(y, R) / R]);
+      for (let i = pts.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [pts[i], pts[j]] = [pts[j], pts[i]]; }
+      return pts;
+    }
+    function fallback() { // a ring, if the mark cannot be read
+      return Array.from({ length: 600 }, (_, i) => { const a = i / 600 * Math.PI * 2; return [.5 + Math.cos(a) * .42, .5 + Math.sin(a) * .42]; });
+    }
+    function progress() {
+      const r = story.getBoundingClientRect(), span = story.offsetHeight - innerHeight;
+      prog = Math.min(1, Math.max(0, -r.top / span));
+      copy.style.opacity = 1 - ease((prog - .04) / .16);
+      copy.style.transform = `translateY(${-prog * 160}px)`;
+      cue.style.opacity = prog > .03 ? 0 : 1;
+      photo.style.opacity = (.55 * (1 - ease((prog - .08) / .3))).toFixed(3);
+      beats.forEach((b, i) => { const at = +b.dataset.at, next = beats[i + 1] ? +beats[i + 1].dataset.at : 2; b.classList.toggle("on", prog >= at && prog < next); });
+    }
+    function draw(now) {
+      const t = reduce ? 0 : (now - t0) / 1000;
+      ctx.clearRect(0, 0, w, h);
+      for (const p of P) {
+        const a = targets ? ease((prog - .14 - p.d * .3) / .38) : 0;
+        const fx = (p.x + Math.sin(t * .05 * p.v + p.s) * .04) * w, fy = (p.y + Math.cos(t * .04 * p.v + p.s * 1.3) * .05) * h;
+        let x = fx + (p.tx - fx) * a, y = fy + (p.ty - fy) * a;
+        if (a > .98) { x += Math.sin(t * 1.2 + p.s) * .6; y += Math.cos(t * 1.1 + p.s) * .6; }
+        const dx = x - mx, dy = y - my, dd = dx * dx + dy * dy;
+        if (dd < 14400) { const f = (1 - Math.sqrt(dd) / 120) * 26; const m = Math.sqrt(dd) || 1; x += dx / m * f; y += dy / m * f; }
+        ctx.globalAlpha = .28 + .72 * a;
+        ctx.fillStyle = a > .5 ? "#0cc0df" : "#7fd9ea";
+        const r = a > .9 ? 1.9 : p.r;
+        ctx.fillRect(x - r / 2, y - r / 2, r, r);
+      }
+      ctx.globalAlpha = 1;
+      requestAnimationFrame(draw);
+    }
+    seed(); size();
+    const img = new Image();
+    img.onload = () => { try { targets = sample(img); } catch (e) { targets = fallback(); } if (!targets.length) targets = fallback(); place(); };
+    img.onerror = () => { targets = fallback(); place(); };
+    img.src = "/assets/icon.svg";
+    addEventListener("resize", size);
+    addEventListener("scroll", progress, { passive: true });
+    cv.parentElement.addEventListener("pointermove", e => { const r = cv.getBoundingClientRect(); mx = e.clientX - r.left; my = e.clientY - r.top; });
+    cv.parentElement.addEventListener("pointerleave", () => { mx = my = -999; });
+    progress(); requestAnimationFrame(draw);
+  })();
+
+  /* ---------- Hero: rotating moment word ---------- */
+  (() => {
+    const words = ["se lancent", "accélèrent", "lèvent des fonds", "fusionnent", "se restructurent", "passent le relais"];
+    const el = document.getElementById("word"); let i = 0;
+    if (reduce) return;
+    setInterval(() => {
+      el.classList.add("out");
+      setTimeout(() => {
+        i = (i + 1) % words.length; el.textContent = words[i];
+        el.classList.remove("out"); el.classList.add("in");
+        requestAnimationFrame(() => requestAnimationFrame(() => el.classList.remove("in")));
+      }, 450);
+    }, 2400);
+  })();
+
+  /* ---------- One view: practices diagram ---------- */
+  (() => {
+    const data = {
+      core: { tag: "La vision intégrée", title: "La direction que prend l’organisation, son fonctionnement réel et la solidité de ses chiffres.", text: "Cette vision intégrée nous permet d’identifier les causes profondes, pas seulement les symptômes, et de bâtir des plans qui fonctionnent concrètement. Nous agissons en partenaire stratégique de long terme, pas en agence traditionnelle.", items: [] },
+      strategy: { tag: "Pôle 01", title: "Stratégie & croissance", text: "Une direction claire et des décisions fondées sur des faits.", items: ["Stratégie d’entreprise", "Planification de la croissance", "Conseil aux dirigeants"] },
+      operations: { tag: "Pôle 02", title: "Opérations & organisation", text: "Des rôles clairs, des flux efficaces et une vision lucide des risques.", items: ["Conseil opérationnel", "Analyse organisationnelle", "Amélioration des processus", "Audits opérationnels", "Identification des risques"] },
+      finance: { tag: "Pôle 03", title: "Finance & transactions", text: "Des fondations financières qui soutiennent la stratégie et convainquent investisseurs et partenaires.", items: ["Planification et modélisation financières", "Préparation aux investisseurs", "Préparation des transactions", "Accompagnement des restructurations"] },
+      impl: { tag: "Pôle 04", title: "Accompagnement à la mise en œuvre", text: "Nous ne nous arrêtons pas aux recommandations : nous travaillons aux côtés de vos équipes jusqu’à ce que le changement soit en place.", items: ["Soutien opérationnel sur le terrain"] }
+    };
+    const panel = document.getElementById("panel");
+    const btns = document.querySelectorAll(".switch button");
+    const shapes = document.querySelectorAll(".venn [data-k]");
+    const ring = document.getElementById("ring");
+    function show(k) {
+      const d = data[k];
+      panel.innerHTML = `<p class="tag">${d.tag}</p><h3>${d.title}</h3><p class="just">${d.text}</p>` + (d.items.length ? `<ul>${d.items.map(x => `<li>${x}</li>`).join("")}</ul>` : "");
+      panel.classList.remove("swap"); void panel.offsetWidth; panel.classList.add("swap");
+      btns.forEach(b => b.setAttribute("aria-pressed", b.dataset.k === k));
+      shapes.forEach(s => s.classList.toggle("on", s.dataset.k === k || k === "core" && s.classList.contains("c")));
+      ring.classList.toggle("on", k === "impl");
+    }
+    btns.forEach(b => b.addEventListener("click", () => show(b.dataset.k)));
+    shapes.forEach(s => s.addEventListener("click", () => show(s.dataset.k)));
+    ring.addEventListener("click", () => show("impl"));
+    show("core");
+  })();
+
+  /* ---------- Moment selector ---------- */
+  (() => {
+    const C = {
+      "Croissance rapide": "Une structure à la hauteur de l’ambition.",
+      "Complexité opérationnelle": "De nombreuses équipes, partenaires et échéances en même temps.",
+      "Levée de fonds": "Des chiffres et un projet qui inspirent confiance aux investisseurs.",
+      "Fusions-acquisitions": "Préparer la transaction et réussir l’intégration.",
+      "Restructuration": "Remettre l’organisation sur des bases solides.",
+      "Gouvernance": "Une autorité claire et des décisions saines quand les enjeux sont élevés.",
+      "Transitions de direction": "La succession du fondateur sans perdre ce qui fonctionne.",
+      "Expansion internationale": "Une exécution cohérente sur tous les marchés."
+    };
+    const P = {
+      S: ["Stratégie & croissance", "Stratégie d’entreprise, planification de la croissance, conseil aux dirigeants."],
+      O: ["Opérations & organisation", "Rôles, flux, amélioration des processus, audits et risques."],
+      F: ["Finance & transactions", "Planification financière, préparation aux investisseurs, préparation des transactions."],
+      I: ["Accompagnement à la mise en œuvre", "Un soutien concret jusqu’à ce que le changement soit en place."]
+    };
+    const M = {
+      founders: { ch: ["Levée de fonds", "Croissance rapide", "Gouvernance", "Complexité opérationnelle"], p: ["S", "F", "O"] },
+      growing: { ch: ["Croissance rapide", "Complexité opérationnelle", "Expansion internationale", "Gouvernance"], p: ["O", "S", "I"] },
+      transition: { ch: ["Fusions-acquisitions", "Restructuration", "Transitions de direction", "Gouvernance"], p: ["F", "O", "I"] }
+    };
+    const list = document.getElementById("chal-list"), help = document.getElementById("help"), stage = document.getElementById("stage");
+    const tabs = [...document.querySelectorAll(".tabs button")];
+    const esc = s => s.replace(/&/g, "&amp;");
+    function pick(m) {
+      list.innerHTML = M[m].ch.map((c, i) => `<div class="chal" style="animation-delay:${i * 60}ms"><b>${esc(c)}</b><span>${C[c]}</span></div>`).join("");
+      help.innerHTML = M[m].p.map((k, i) => `<li style="animation-delay:${i * 80}ms"><i>${["S","O","F","I"].indexOf(k) + 1}</i><div><b>${esc(P[k][0])}</b><span>${esc(P[k][1])}</span></div></li>`).join("");
+      tabs.forEach(t => { const on = t.dataset.m === m; t.setAttribute("aria-selected", on); t.tabIndex = on ? 0 : -1; if (on) stage.setAttribute("aria-labelledby", t.id); });
+    }
+    tabs.forEach((t, i) => {
+      t.addEventListener("click", () => pick(t.dataset.m));
+      t.addEventListener("keydown", e => {
+        const d = e.key === "ArrowRight" || e.key === "ArrowDown" ? 1 : e.key === "ArrowLeft" || e.key === "ArrowUp" ? -1 : 0;
+        if (!d) return; e.preventDefault();
+        const n = tabs[(i + d + tabs.length) % tabs.length]; n.focus(); pick(n.dataset.m);
+      });
     });
-  }, { rootMargin: "-45% 0px -50% 0px" });
-  document.querySelectorAll("main section[id]").forEach(s => watch.observe(s));
+    pick("founders");
+  })();
 
-  // Until a form service is connected, the form opens the visitor's email app with the message filled in
-  document.getElementById("contact-form").addEventListener("submit", e => {
-    e.preventDefault();
-    const f = e.target;
-    const labels = ['Nom', 'Entreprise', 'Fonction', 'E-mail'];
-    const lines = ["name", "company", "role", "email"].map((k, i) => labels[i] + ": " + f.elements[k].value);
-    const body = lines.join("\n") + "\n\n" + f.elements.message.value;
-    location.href = "mailto:contact@ivconsultinggroup.com?subject=" + encodeURIComponent("Demande depuis le site") + "&body=" + encodeURIComponent(body);
-    document.getElementById("form-msg").hidden = false;
+  /* ---------- Sector line art ---------- */
+  document.querySelectorAll(".sector canvas").forEach(cv => {
+    const ctx = cv.getContext("2d"), art = cv.dataset.art;
+    function paint(t) {
+      const dpr = Math.min(devicePixelRatio || 1, 2), w = cv.clientWidth, h = cv.clientHeight;
+      if (cv.width !== w * dpr) { cv.width = w * dpr; cv.height = h * dpr; }
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      const bg = ctx.createLinearGradient(0, 0, w, h);
+      bg.addColorStop(0, art === "pitch" ? "#0b3346" : "#10283a"); bg.addColorStop(1, "#061a26");
+      ctx.fillStyle = bg; ctx.fillRect(0, 0, w, h);
+      ctx.strokeStyle = "rgba(12,192,223,.28)"; ctx.lineWidth = 1;
+      const s = t * .0003;
+      if (art === "pitch") {
+        // a pitch seen in perspective: touchline, halfway line, centre circle
+        const cx = w * .62, cy = h * .34;
+        ctx.beginPath(); ctx.ellipse(cx, cy, w * .2, h * .08, 0, 0, Math.PI * 2); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(cx, cy - h * .3); ctx.lineTo(cx, cy + h * .3); ctx.stroke();
+        for (let i = 0; i < 9; i++) {
+          const y = cy - h * .22 + i * h * .06 + Math.sin(s + i) * 2;
+          ctx.globalAlpha = .35 + .4 * Math.sin(s * 2 + i * .7) ** 2;
+          ctx.beginPath(); ctx.moveTo(w * .05, y + i * 6); ctx.lineTo(w * 1.1, y - i * 2); ctx.stroke();
+        }
+        ctx.globalAlpha = 1;
+      } else {
+        // stage lights: beams fanning down from a truss
+        for (let i = 0; i < 7; i++) {
+          const x = w * (.25 + i * .12), sway = Math.sin(s * 2 + i) * w * .08;
+          const g = ctx.createLinearGradient(x, 0, x + sway, h * .7);
+          g.addColorStop(0, "rgba(12,192,223,.35)"); g.addColorStop(1, "rgba(12,192,223,0)");
+          ctx.fillStyle = g;
+          ctx.beginPath(); ctx.moveTo(x - 3, 10); ctx.lineTo(x + sway - w * .07, h * .75); ctx.lineTo(x + sway + w * .07, h * .75); ctx.lineTo(x + 3, 10); ctx.fill();
+        }
+        ctx.beginPath(); ctx.moveTo(w * .15, 10); ctx.lineTo(w * 1.05, 10); ctx.stroke();
+      }
+      const shade = ctx.createLinearGradient(0, h * .35, 0, h);
+      shade.addColorStop(0, "rgba(6,26,38,0)"); shade.addColorStop(1, "rgba(6,26,38,.95)");
+      ctx.fillStyle = shade; ctx.fillRect(0, 0, w, h);
+      if (!reduce) requestAnimationFrame(paint);
+    }
+    requestAnimationFrame(paint);
   });
+
+  /* ---------- Approach: vertical scroll moves the cards sideways ---------- */
+  (() => {
+    const story = document.getElementById("hstory"), track = document.getElementById("htrack");
+    const cards = [...track.children], bar = document.getElementById("hbar"), count = document.getElementById("hcount");
+    const wide = matchMedia("(min-width: 901px)");
+    function update() {
+      if (!wide.matches) { track.style.transform = ""; cards.forEach(c => c.classList.remove("on")); return; }
+      const r = story.getBoundingClientRect(), span = story.offsetHeight - innerHeight;
+      const q = Math.min(1, Math.max(0, -r.top / span));
+      const last = cards[cards.length - 1];
+      const travel = last.offsetLeft + last.offsetWidth / 2 - innerWidth * .5 - (cards[0].offsetLeft + cards[0].offsetWidth / 2 - innerWidth * .5);
+      track.style.transform = `translateX(${-q * Math.max(0, travel)}px)`;
+      const idx = Math.min(cards.length - 1, Math.round(q * (cards.length - 1)));
+      cards.forEach((c, i) => c.classList.toggle("on", i === idx));
+      bar.style.width = (q * 100).toFixed(1) + "%";
+      count.textContent = `Étape ${idx + 1} sur ${cards.length}`;
+    }
+    addEventListener("scroll", update, { passive: true }); addEventListener("resize", update); update();
+  })();
+
+  /* ---------- Band parallax ---------- */
+  (() => {
+    const img = document.getElementById("band-img"); if (reduce || !img) return;
+    const band = img.parentElement;
+    function move() { const r = band.getBoundingClientRect(); if (r.bottom < 0 || r.top > innerHeight) return; const k = (r.top + r.height / 2 - innerHeight / 2) / innerHeight; img.style.transform = `translateY(${k * -60}px) scale(1.05)`; }
+    addEventListener("scroll", move, { passive: true }); move();
+  })();
+
+  /* ---------- Diagnostic ---------- */
+  (() => {
+    const Q = [
+      { q: "Où en est votre organisation aujourd’hui ?", o: [["launch", "Lancement d’une nouvelle activité ou d’un projet"], ["grow", "Croissance rapide"], ["transition", "Période de transition"]] },
+      { q: "Qu’est-ce qui demande votre attention en priorité ?", o: [["S", "La direction et les priorités"], ["O", "Les opérations et l’exécution au quotidien"], ["F", "Le financement, les chiffres et les transactions"], ["I", "La mise en œuvre effective du plan"]] },
+      { q: "À quoi ressemblerait la réussite dans 12 mois ?", o: [["plan", "Un plan clair que tout le monde suit"], ["team", "Une équipe autonome, sans que je règle tout"], ["money", "Des chiffres qui inspirent confiance aux investisseurs et partenaires"], ["done", "Le changement pleinement en place"]] }
+    ];
+    const R = {
+      S: { name: "Stratégie & croissance", why: "Vous avez d’abord besoin d’une direction claire. Nous commençons par définir où va l’organisation et quelles décisions comptent le plus.",
+        plan: [["Semaines 1–3", "Entretiens avec la direction et analyse approfondie des chiffres."], ["Semaines 4–6", "Une courte liste de choix stratégiques et un plan de croissance."], ["Semaines 7–12", "Priorités, responsables et jalons en mouvement."]] },
+      O: { name: "Opérations & organisation", why: "Votre ambition devance votre structure. Nous commençons par la façon dont le travail circule réellement : rôles, transmissions et zones de risque.",
+        plan: [["Semaines 1–3", "Cartographie des rôles, des flux et des transmissions sur le terrain."], ["Semaines 4–6", "Un audit opérationnel et une liste d’actions priorisées."], ["Semaines 7–12", "De nouvelles routines, des rôles clairs et les indicateurs pour les suivre."]] },
+      F: { name: "Finance & transactions", why: "Les chiffres doivent tenir avant la prochaine étape. Nous commençons par des fondations financières qui convainquent investisseurs et partenaires.",
+        plan: [["Semaines 1–3", "Revue des états financiers et construction d’un modèle de travail."], ["Semaines 4–6", "Le plan, le récit financier et les documents que les investisseurs ou partenaires examineront."], ["Semaines 7–12", "Un accompagnement pendant la préparation face aux investisseurs, d’une transaction ou d’une restructuration."]] },
+      I: { name: "Accompagnement à la mise en œuvre", why: "Le plan existe, il doit maintenant se concrétiser. Nous commençons par définir des responsables et un rythme, puis travaillons avec vos équipes jusqu’au bout.",
+        plan: [["Semaines 1–3", "Revue du plan existant et de ses points de blocage."], ["Semaines 4–6", "Responsables, rythme et suivi d’avancement en place."], ["Semaines 7–12", "Un soutien concret jusqu’à ce que le changement tienne."]] }
+    };
+    const box = document.getElementById("diag"); let a = [];
+    const esc = s => s.replace(/&/g, "&amp;");
+    function q(i) {
+      const d = Q[i];
+      box.innerHTML = `<div class="d-top"><span>Question ${i + 1} sur 3</span><span class="d-bar">${Q.map((_, k) => `<i class="${k <= i ? "done" : ""}"></i>`).join("")}</span></div>
+        <p class="d-q d-anim">${d.q}</p>
+        <div class="d-opts d-anim">${d.o.map(([k, l]) => `<button type="button" data-k="${k}">${esc(l)}</button>`).join("")}</div>
+        ${i ? `<button class="d-back" type="button">← Retour</button>` : ""}`;
+      box.querySelectorAll(".d-opts button").forEach(b => b.addEventListener("click", () => { a[i] = [b.dataset.k, b.textContent]; i < 2 ? q(i + 1) : result(); }));
+      const back = box.querySelector(".d-back"); if (back) back.addEventListener("click", () => q(i - 1));
+    }
+    function result() {
+      const r = R[a[1][0]];
+      box.innerHTML = `<div class="d-top"><span>Votre point de départ</span><span class="d-bar"><i class="done"></i><i class="done"></i><i class="done"></i></span></div>
+        <div class="d-res d-anim"><p class="d-res-tag">Pôle recommandé</p><h3>${esc(r.name)}</h3><p class="just">${r.why}</p>
+        <ol class="d-plan">${r.plan.map(([w, x]) => `<li><b>${w}</b><span>${x}</span></li>`).join("")}</ol>
+        <p class="d-note">Un aperçu de ce que pourraient être les 90 premiers jours. Chaque mission est construite autour de votre situation.</p>
+        <div class="d-actions"><button class="btn solid magnetic" type="button" id="d-send">Envoyer à IVCG <span aria-hidden="true">→</span></button><button class="btn ghost" type="button" id="d-redo">Recommencer</button></div></div>`;
+      document.getElementById("d-redo").addEventListener("click", () => { a = []; q(0); });
+      document.getElementById("d-send").addEventListener("click", () => {
+        document.getElementById("c-msg").value = `Réponses au diagnostic :\n- Aujourd’hui : ${a[0][1]}\n- Priorité : ${a[1][1]}\n- Réussite dans 12 mois : ${a[2][1]}\nPoint de départ suggéré : ${r.name}`;
+        document.getElementById("contact").scrollIntoView({ behavior: reduce ? "auto" : "smooth" });
+        setTimeout(() => document.getElementById("c-name").focus({ preventScroll: true }), 700);
+      });
+      bindMagnets();
+    }
+    q(0);
+  })();
+
+  /* ---------- Cursor and magnetic buttons (mouse only) ---------- */
+  function bindMagnets() {
+    if (reduce || !matchMedia("(pointer: fine)").matches) return;
+    document.querySelectorAll(".magnetic:not([data-mag])").forEach(el => {
+      el.dataset.mag = "1";
+      el.addEventListener("pointermove", e => { const r = el.getBoundingClientRect(); el.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .22}px, ${(e.clientY - r.top - r.height / 2) * .35}px)`; });
+      el.addEventListener("pointerleave", () => { el.style.transform = ""; });
+    });
+  }
+  (() => {
+    if (reduce || !matchMedia("(pointer: fine)").matches) return;
+    const c = document.createElement("div"); c.className = "cursor"; c.setAttribute("aria-hidden", "true"); document.body.append(c);
+    let x = 0, y = 0, cx = 0, cy = 0;
+    addEventListener("pointermove", e => { x = e.clientX; y = e.clientY; c.classList.add("show"); c.classList.toggle("big", !!e.target.closest("a, button, .c, .core, .sector, input, textarea, .why-row")); });
+    document.addEventListener("pointerleave", () => c.classList.remove("show"));
+    (function loop() { cx += (x - cx) * .2; cy += (y - cy) * .2; c.style.transform = `translate(${cx}px, ${cy}px)`; requestAnimationFrame(loop); })();
+    bindMagnets();
+  })();
+
+  /* ---------- Gentle lift on entry (content stays visible) ---------- */
+  (() => {
+    if (reduce || !("IntersectionObserver" in window)) return;
+    const els = document.querySelectorAll(".lift");
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.remove("pre"); io.unobserve(e.target); } }), { threshold: .15 });
+    els.forEach(el => { if (el.getBoundingClientRect().top > innerHeight) { el.classList.add("pre"); io.observe(el); } });
+  })();
+
+  /* ---------- Contact form: sent to Formspree, which emails contact@ivconsultinggroup.com ---------- */
+  (() => {
+    const form = document.getElementById("form"), out = document.getElementById("sent"), btn = form.querySelector("button[type=submit]");
+    const T = { sending: "Envoi en cours…", ok: "Merci. Votre message a bien été envoyé. Nous répondons sous deux jours ouvrés.", missing: "Merci d’indiquer votre nom, un e-mail valide et un court message.", fail: "Votre message n’a pas pu être envoyé. Écrivez-nous à contact@ivconsultinggroup.com." };
+    form.addEventListener("submit", async e => {
+      e.preventDefault();
+      if (!form.checkValidity()) { out.textContent = T.missing; out.className = "sent err"; out.hidden = false; form.reportValidity(); return; }
+      btn.disabled = true; out.textContent = T.sending; out.className = "sent"; out.hidden = false;
+      try {
+        const data = new FormData(form);
+        data.append("_subject", "Nouvelle demande depuis ivconsultinggroup.com/fr");
+        data.append("page_language", document.documentElement.lang);
+        const r = await fetch(form.action, { method: "POST", body: data, headers: { Accept: "application/json" } });
+        if (!r.ok) throw new Error(r.status);
+        form.reset(); out.textContent = T.ok;
+      } catch (err) { out.textContent = T.fail; out.className = "sent err"; }
+      btn.disabled = false;
+    });
+  })();
 </script>
 </body>
 </html>
