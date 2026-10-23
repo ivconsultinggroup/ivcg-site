@@ -11,7 +11,7 @@
     h1 { font-size: 22px; margin: 0 0 6px; color: #061a26; }
     .card { background: #fff; border: 1px solid #d6e3ea; border-radius: 12px; padding: 28px; margin: 22px 0; }
     button { font: 700 14px Arial, sans-serif; background: #0cc0df; color: #061a26; border: 0; border-radius: 99px; padding: 12px 22px; cursor: pointer; }
-    #msg { margin-left: 12px; font-weight: 700; color: #0890a8; }
+    .msg { margin-left: 12px; font-weight: 700; color: #0890a8; }
     ol { padding-left: 1.2em; }
     li { margin: 6px 0; }
   </style>
@@ -19,9 +19,11 @@
 <body>
 <div class="wrap">
   <h1>IVCG email signature</h1>
-  <p>Click <b>Copy signature</b>, then paste it into Gmail. Steps are below.</p>
+  <p>Choose the signature, click its <b>Copy signature</b> button, then paste it into Gmail. Steps are below.</p>
 
-  <div class="card" id="sig">
+  <h2 style="font-size:17px;margin:34px 0 0">1. Rodrigue Diambonda</h2>
+  <p style="margin:4px 0 0;color:#557080">For rodrigue@ivconsultinggroup.com.</p>
+  <div class="card" data-sig>
 <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;color:#1d4355">
   <tr>
     <td style="padding:0 18px 0 0;border-right:2px solid #0cc0df;vertical-align:middle">
@@ -42,30 +44,59 @@
 <p style="font-size:10px;line-height:1.5;color:#8aa0ab;max-width:560px;margin:16px 0 0;font-family:Arial,Helvetica,sans-serif">This message and any attachments are confidential and intended only for the named recipient. If you received it in error, please let us know and delete it.</p>
   </div>
 
-  <button type="button" id="copy">Copy signature</button><span id="msg" role="status"></span>
+  
+
+  <button type="button" class="copy">Copy signature</button><span class="msg" role="status"></span>
+
+  <h2 style="font-size:17px;margin:34px 0 0">2. General mailbox</h2>
+  <p style="margin:4px 0 0;color:#557080">For contact@ivconsultinggroup.com and anyone answering on behalf of IVCG.</p>
+  <div class="card" data-sig>
+<table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;color:#1d4355">
+  <tr>
+    <td style="padding:0 18px 0 0;border-right:2px solid #0cc0df;vertical-align:middle">
+      <a href="https://ivconsultinggroup.com"><img src="https://ivconsultinggroup.com/assets/email-logo.png?v=2" width="170" height="43" alt="Innovation Vision Consulting Group" style="display:block;width:170px;height:43px;border:0"></a>
+    </td>
+    <td style="padding:0 0 0 18px;vertical-align:middle">
+      <div style="font-size:16px;font-weight:bold;color:#061a26;line-height:1.3">Innovation Vision Consulting Group</div>
+      <div style="font-size:13px;color:#557080;line-height:1.5">Strategy, operations and financial advisory</div>
+      <div style="font-size:12px;line-height:1.8;margin-top:6px">
+        <a href="mailto:contact@ivconsultinggroup.com" style="color:#1d4355;text-decoration:none">contact@ivconsultinggroup.com</a><br>
+        <a href="tel:+17274540474" style="color:#1d4355;text-decoration:none">+1 727 454 0474</a><br>
+        <a href="https://ivconsultinggroup.com" style="color:#0890a8;text-decoration:none;font-weight:bold">ivconsultinggroup.com</a><span style="color:#c9d7de">&nbsp;|&nbsp;</span><a href="https://www.linkedin.com/company/ivconsultinggroup" style="color:#0890a8;text-decoration:none">LinkedIn</a>
+      </div>
+      <div style="font-size:11px;letter-spacing:2px;color:#0890a8;font-weight:bold;margin-top:8px">STRATEGY · OPERATIONS · FINANCE</div>
+    </td>
+  </tr>
+</table>
+<p style="font-size:10px;line-height:1.5;color:#8aa0ab;max-width:560px;margin:16px 0 0;font-family:Arial,Helvetica,sans-serif">This message and any attachments are confidential and intended only for the named recipient. If you received it in error, please let us know and delete it.</p>
+  </div>
+
+  
+
+  <button type="button" class="copy">Copy signature</button><span class="msg" role="status"></span>
 
   <h2 style="font-size:17px;margin-top:34px">Add it to Gmail</h2>
   <ol>
     <li>In Gmail, click the <b>gear icon</b> (top right) → <b>See all settings</b>.</li>
-    <li>On the <b>General</b> tab, scroll to <b>Signature</b> → <b>Create new</b>, and name it “IVCG”.</li>
+    <li>On the <b>General</b> tab, scroll to <b>Signature</b> → <b>Create new</b>, and name it (for example “IVCG” or “IVCG General”).</li>
     <li>Click in the box and paste (<b>Cmd + V</b> on Mac, <b>Ctrl + V</b> on Windows).</li>
-    <li>Under <b>Signature defaults</b>, choose “IVCG” for <b>new emails</b> and <b>replies</b>.</li>
+    <li>Under <b>Signature defaults</b>, choose it for <b>new emails</b> and <b>replies</b>. The general signature goes in the contact@ account (or, if contact@ is an alias in your Gmail, pick the contact@ address in the <b>For</b> dropdown).</li>
     <li>Scroll to the bottom and click <b>Save Changes</b>.</li>
   </ol>
   <p>If the copy button does nothing, select the signature in the white box with your mouse, copy it, and paste it the same way.</p>
 </div>
 <script>
-  document.getElementById("copy").addEventListener("click", async () => {
-    const box = document.getElementById("sig"), msg = document.getElementById("msg");
+  document.querySelectorAll(".copy").forEach(btn => btn.addEventListener("click", async () => {
+    const box = btn.previousElementSibling, msg = btn.nextElementSibling;
     try {
       await navigator.clipboard.write([new ClipboardItem({ "text/html": new Blob([box.innerHTML], { type: "text/html" }), "text/plain": new Blob([box.innerText], { type: "text/plain" }) })]);
       msg.textContent = "Copied. Now paste it into Gmail.";
     } catch (e) {
       const r = document.createRange(); r.selectNodeContents(box);
-      const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+      const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r);
       msg.textContent = document.execCommand("copy") ? "Copied. Now paste it into Gmail." : "Select the signature and copy it manually.";
     }
-  });
+  }));
 </script>
 </body>
 </html>
