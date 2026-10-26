@@ -362,6 +362,33 @@
     *, *::before, *::after { animation: none !important; transition: none !important; }
     .lift.pre { transform: none; }
   }
+  /* ---------- Case study ---------- */
+  .case { background: var(--ink); color: var(--white); padding-block: clamp(72px, 10vw, 130px); position: relative; overflow: hidden; }
+  .case::before { content: ""; position: absolute; inset: 0; background: url("/assets/concert.webp") 70% 40% / cover no-repeat; opacity: .14; pointer-events: none; }
+  .case .wrap { position: relative; }
+  .case .kicker { color: var(--cyan); }
+  .case-head { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px 60px; align-items: end; margin-bottom: 44px; }
+  .case h2 { font-size: clamp(2.1rem, 4.2vw, 3.6rem); margin-top: 18px; }
+  .case h2 em { color: var(--cyan); }
+  .case-head p { color: var(--on-ink-muted); }
+  .case-tabs { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid rgba(255,255,255,.14); }
+  .case-tabs button { text-align: left; background: none; border: 0; border-bottom: 3px solid transparent; padding: 16px 16px 16px 0; cursor: pointer; color: var(--on-ink-muted); font: 500 clamp(1.1rem, 1.8vw, 1.5rem) var(--serif); display: flex; align-items: baseline; gap: 12px; transition: color .2s, border-color .3s; min-width: 0; }
+  .case-tabs button i { font: 700 .72rem var(--sans); letter-spacing: .14em; color: var(--cyan); font-style: normal; }
+  .case-tabs button[aria-selected="true"] { color: var(--white); border-bottom-color: var(--cyan); }
+  .case-tabs button:hover { color: var(--white); }
+  .case-panel { padding-top: 36px; min-height: 280px; }
+  .case-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .case-item { border: 1px solid rgba(255,255,255,.12); border-radius: 14px; padding: 20px 22px; background: rgba(255,255,255,.03); display: grid; gap: 6px; align-content: start; min-width: 0; animation: rise .5s both; transition: border-color .25s, background .25s; }
+  .case-item:hover { border-color: var(--cyan); background: rgba(12,192,223,.06); }
+  .case-item b { font-size: 1rem; color: var(--white); }
+  .case-item span { font-size: .9rem; color: var(--on-ink-muted); }
+  .case-quote { font-family: var(--serif); font-style: italic; font-size: clamp(1.8rem, 3.6vw, 3rem); line-height: 1.15; color: var(--white); max-width: 22ch; animation: rise .5s both; }
+  .case-quote::before { content: "“"; color: var(--cyan); }
+  .case-quote::after { content: "”"; color: var(--cyan); }
+  .case-note { color: var(--on-ink-muted); max-width: 40em; margin-top: 20px; animation: rise .5s .1s both; }
+  .case-cta { margin-top: 30px; }
+  @media (max-width: 900px) { .case-head { grid-template-columns: 1fr; } .case-list { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .case-tabs { grid-template-columns: 1fr; } .case-list { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -521,6 +548,25 @@
           <article class="h-card"><span class="h-num">05</span><div><h3>Execute</h3><p><b>Hands-on support until it works.</b>We stay alongside your team while the change is put in place.</p></div></article>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDY -->
+  <section class="case" id="case">
+    <div class="wrap">
+      <div class="case-head lift">
+        <div>
+          <p class="kicker">How we think · A case study</p>
+          <h2 class="display">A restructuring blueprint for a <em>large-scale event production company.</em></h2>
+        </div>
+        <p class="just">A company whose creative reputation had grown faster than its internal structure. Every organization is different; this is one example of how we approach the problem.</p>
+      </div>
+      <div class="case-tabs" role="tablist" aria-label="Case study">
+        <button type="button" role="tab" id="ct-found" aria-selected="true" aria-controls="case-panel" data-c="found"><i>01</i>What we found</button>
+        <button type="button" role="tab" id="ct-designed" aria-selected="false" aria-controls="case-panel" data-c="designed" tabindex="-1"><i>02</i>What we designed</button>
+        <button type="button" role="tab" id="ct-principle" aria-selected="false" aria-controls="case-panel" data-c="principle" tabindex="-1"><i>03</i>The principle</button>
+      </div>
+      <div class="case-panel" id="case-panel" role="tabpanel" aria-labelledby="ct-found" aria-live="polite"></div>
     </div>
   </section>
 
@@ -915,6 +961,29 @@
     const els = document.querySelectorAll(".lift");
     const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.remove("pre"); io.unobserve(e.target); } }), { threshold: .15 });
     els.forEach(el => { if (el.getBoundingClientRect().top > innerHeight) { el.classList.add("pre"); io.observe(el); } });
+  })();
+
+  /* ---------- Case study ---------- */
+  (() => {
+    const C = {
+      found: [["Decisions in a few hands", "Coordination and approvals concentrated in a few people."], ["Roles not defined", "Responsibilities and titles unclear inside and outside the team."], ["One legal channel", "Contracts and legal matters running through a single person."], ["Manual finances", "Financial tracking by hand, with limited real-time visibility."], ["Scattered communication", "Project information spread across messaging apps and email."], ["No onboarding", "No standard way to bring freelancers and contractors on board."]],
+      designed: [["Structure and roles", "Clear departments, roles and reporting lines."], ["Decisions and governance", "Who decides what, and how issues move up."], ["Communication and workflows", "One flow for information, approvals and changes."], ["Financial controls", "Budgets, cost tracking and reporting that match the scale."], ["Systems and automation", "Tools that support the team instead of slowing it down."], ["A transition plan", "A phased roadmap that brings the team along."]]
+    };
+    const tabs = [...document.querySelectorAll(".case-tabs button")], panel = document.getElementById("case-panel");
+    function pick(k) {
+      if (k === "principle") {
+        panel.innerHTML = `<p class="case-quote">Keep the family spirit while gaining real structure.</p><p class="case-note just">The goal was never to make a creative company corporate. It was to protect its culture as it grows. Every engagement starts from how the organization already works, and is sized to it.</p><a class="btn solid magnetic case-cta" href="#contact">Talk about your organization <span aria-hidden="true">→</span></a>`;
+      } else {
+        panel.innerHTML = `<div class="case-list">${C[k].map(([t, d], i) => `<div class="case-item" style="animation-delay:${i * 60}ms"><b>${t}</b><span>${d}</span></div>`).join("")}</div>`;
+      }
+      tabs.forEach(t => { const on = t.dataset.c === k; t.setAttribute("aria-selected", on); t.tabIndex = on ? 0 : -1; if (on) panel.setAttribute("aria-labelledby", t.id); });
+      if (typeof bindMagnets === "function") bindMagnets();
+    }
+    tabs.forEach((t, i) => {
+      t.addEventListener("click", () => pick(t.dataset.c));
+      t.addEventListener("keydown", e => { const d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0; if (!d) return; e.preventDefault(); const n = tabs[(i + d + tabs.length) % tabs.length]; n.focus(); pick(n.dataset.c); });
+    });
+    pick("found");
   })();
 
   /* ---------- Contact form: sent to Formspree, which emails hello@ivconsultinggroup.com ---------- */
